@@ -510,12 +510,13 @@ header .show-items {
 
 @media (max-width: 550px) {
   .category-item h5 {
-    font-size: 10px !important;
-    margin-top: 0px !important;
+    font-size: 50% !important;
+    margin-top: 5% !important;
   }
 
   .category-item {
     width: calc(25% - 15px) !important;
+
   }
   .con-category {
     gap: 15px !important;
