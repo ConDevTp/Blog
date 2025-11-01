@@ -44,3 +44,33 @@ function Toggle_Menu_Mobile() {
     document.getElementById("menu_mobile").classList.add("Toogle_Menu_Mobile");
   }
 }
+// Header END
+
+// Body
+// -- Boxes
+const containers = document.querySelectorAll(".con-boxes");
+const btnNexts = document.querySelectorAll(".btn-next");
+const btnPrevs = document.querySelectorAll(".btn-prev");
+
+function getGap() {
+  return window.innerWidth < 500 ? 20 : 30;
+}
+
+function getBoxWidth(container) {
+  const box = container.querySelector(".box");
+  const style = window.getComputedStyle(box);
+  const marginRight = parseInt(style.marginRight) || 0;
+  return box.offsetWidth + marginRight + getGap();
+}
+
+btnNexts.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    containers[index].scrollLeft += getBoxWidth(containers[index]);
+  });
+});
+
+btnPrevs.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    containers[index].scrollLeft -= getBoxWidth(containers[index]);
+  });
+});
