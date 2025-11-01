@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BiBag - بی باگ</title>
+    <!-- Site Icon -->
+    <link rel="icon" href="./assets/img/logo.jpg" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css" />
+    <!-- Fontawsome -->
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body
+    class="d-flex justify-content-center align-items-center p-2 p-lg-4 flex-column"
+  >
+    <header class="d-flex flex-column w-100 p-3 rounded">
+      <div
+        class="w-100 d-flex justify-content-between align-items-center flex-row-reverse flex-sm-row"
+      >
+        <div
+          class="d-flex justify-content-sm-center justify-content-between align-items-center flex-row-reverse flex-sm-row w-sm-100"
+        >
+          <a
+            href="#"
+            class="d-flex justify-content-between align-items-center logo"
+          >
+            <img
+              src="./assets/img/logo.jpg"
+              alt="BiBag"
+              class="img-fluid rounded shadow-sm"
+            />
+            <small class="mx-2 d-none d-sm-flex">بی باگ</small>
+          </a>
+
+          <input
+            type="search"
+            class="form-control mr-3 mr-sm-4"
+            placeholder="جستجو در بی باگ ..."
+          />
+        </div>
+
+        <button class="login-btn btn rounded d-none d-sm-block">
+          ورود / ثبت‌نام
+        </button>
+        <button
+          class="menu-btn d-flex justify-content-center align-items-center shadow-lg d-sm-none"
+          onclick="Toggle_Menu_Mobile()"
+        >
+          <i class="fa fa-bars m-0 p-0"></i>
+        </button>
+      </div>
+
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-start align-items-start align-items-md-center header-menu mt-3 pt-1 position-relative menu-mobile"
+        id="menu_mobile"
+      >
+        <div
+          class="d-flex justify-content-between align-items-center mb-3 mt-1 w-100 d-sm-none"
+        >
+          <button
+            class="menu-btn d-flex justify-content-center align-items-center d-sm-none"
+            style="width: fit-content !important"
+            onclick="Toggle_Menu_Mobile()"
+          >
+            <i
+              style="font-size: 16px !important"
+              class="fa fa-times m-0 p-0"
+            ></i>
+          </button>
+
+              <button class="login-btn btn rounded ">
+          ورود / ثبت‌نام
+        </button>
+        </div>
+        <div class="position-relative w-auto" id="section_category">
+          <a onclick="ShowMenuItems()" id="category">
+            <i class="fa fa-cogs"></i>
+
+            دسته بندی ها
+            <i class="fa fa-angle-down" id="arrow-menu-header"></i>
+          </a>
+          <div
+            class="d-flex flex-column justify-content-center align-items-start header-menu-items rounded mt-2 mt-sm-0"
+            id="menu-items"
+          >
+            <a href="#">
+              <i class="fa fa-book"></i>
+              آموزش رایگان</a
+            >
+            <a href="#">
+              <i class="fa fa-briefcase"></i>
+              دوره ها</a
+            >
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              چت جی‌پی‌تی</a
+            >
+            <a href="#">
+              <i class="fa fa-cubes"></i>
+              اینترنت 3</a
+            >
+            <a href="#">
+              <i class="fa fa-quote-left"></i>
+              مقاله ها</a
+            >
+          </div>
+        </div>
+        <a href="#" class="mr-2">
+          <i class="fa fa-code"></i>
+          برنامه نویسی
+        </a>
+        <a href="#">
+          <i class="fas fa-microchip"></i>
+          هوش مصنوعی
+        </a>
+        <a href="#">
+          <i class="fa fa-code-branch"></i>
+          فتوشاپ
+        </a>
+        <a href="#">
+          <i class="fa fa-swatchbook"></i>
+          طراحی
+        </a>
+      </div>
+    </header>
+
+    <h1 class="mx-auto">Blog Website</h1>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Custom -->
+    <script src="./assets/js/index.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").carousel({
+          interval: 6000,
+        });
+      });
+    </script>
+  </body>
+</html>
