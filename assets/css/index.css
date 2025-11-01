@@ -537,4 +537,137 @@ header .show-items {
 
 /* Categories End */
 
+/* Boxes Start  */
+
+.con-boxes {
+  gap: 30px !important;
+}
+
+.box {
+  width: calc(25% = 60px) !important;
+  padding: 15px !important;
+  background-color: var(--black3);
+  cursor: pointer;
+}
+
+.box .box-title {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-align: right !important;
+  font-family: "rokhm" !important;
+  /* -- */
+  font-size: 18px !important;
+  line-height: 30px !important;
+  color: var(--yellow2) !important;
+}
+.box .box-text {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-align: right !important;
+  /* -- */
+  font-size: 14px !important;
+  line-height: 28px !important;
+}
+
+.box .btn {
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: 14px !important;
+}
+
+.box i {
+  font-size: 12px !important;
+}
+
+.box .btn:hover {
+  color: var(--yellow1) !important;
+}
+.box .btn:hover + i {
+  color: var(--yellow1) !important;
+}
+
+.box:hover {
+  transform: translateY(-10px) !important;
+  opacity: 0.8;
+}
+
+.btn-title {
+  padding: 0px !important;
+  border-radius: 200px !important;
+  border: 1px solid var(--yellow2) !important;
+  cursor: pointer;
+  width: 40px !important;
+  height: 40px !important;
+}
+.btn-title i {
+  font-size: 100% !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.btn-title:hover {
+  transform: scale(0.95);
+  background: var(--black2);
+}
+
+@media (max-width: 992px) {
+  .con-boxes {
+    gap: 40px 10px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .box {
+    width: calc(50% - 20px) !important;
+    padding: 15px !important;
+    background-color: var(--black3);
+    cursor: pointer;
+  }
+}
+@media (max-width: 550px) {
+  .con-boxes {
+    gap: 20px 5px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .box {
+    width: calc(50% - 10px) !important;
+    background-color: var(--black3);
+    cursor: pointer;
+    padding: 10px !important;
+  }
+
+  .box .box-title {
+    font-size: 14px !important;
+    -webkit-line-clamp: 2 !important;
+    line-height: 25px !important;
+  }
+
+  .box .box-text {
+    font-size: 14px !important;
+    display: none !important;
+  }
+
+  .box .btn {
+    font-size: 12px !important;
+  }
+  .box i {
+    font-size: 9px !important;
+  }
+
+  .btn-title {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .btn-title i {
+    font-size: 80% !important;
+  }
+}
+
+/* Boxes End  */
+
 /* Body End */
