@@ -1,8 +1,16 @@
 // Header
+
 if (window.innerWidth < 550) {
   document.getElementById("menu-items").classList.add("show-items");
-  document.getElementById("menu_mobile").classList.add("Toogle_Menu_Mobile");
 }
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth < 550) {
+    document.getElementById("menu-items").classList.add("show-items");
+  }
+
+  closeMenu();
+});
 
 function ShowMenuItems() {
   if (document.getElementById("menu-items").classList.contains("show-items")) {
@@ -37,13 +45,24 @@ function Toggle_Menu_Mobile() {
       .getElementById("menu_mobile")
       .classList.contains("Toogle_Menu_Mobile")
   ) {
+    document.getElementById("body").classList.remove("no-scroll");
+    document.getElementById("overlay").style.display = "none";
     document
       .getElementById("menu_mobile")
       .classList.remove("Toogle_Menu_Mobile");
   } else {
+    document.getElementById("body").classList.add("no-scroll");
+    document.getElementById("overlay").style.display = "block";
     document.getElementById("menu_mobile").classList.add("Toogle_Menu_Mobile");
   }
 }
+
+function closeMenu() {
+  document.getElementById("menu_mobile").classList.remove("Toogle_Menu_Mobile");
+  document.body.classList.remove("no-scroll");
+  document.getElementById("overlay").style.display = "none";
+}
+
 // Header END
 
 // Body
