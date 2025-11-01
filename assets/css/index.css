@@ -510,7 +510,7 @@ header .show-items {
 
 @media (max-width: 550px) {
   .category-item h5 {
-    font-size: 0% !important;
+    font-size: 60% !important;
     margin-top: 5% !important;
   }
 
