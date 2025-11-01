@@ -222,19 +222,18 @@ header .show-items {
     height: max-content !important;
     padding: 15px !important;
     background-color: var(--yellow1) !important;
-    transition: .4s all !important;
-    opacity: 1;
+    transition: 0.4s all !important;
+    z-index: 100000 !important;
   }
 
   .Toogle_Menu_Mobile {
     right: -100% !important;
-    opacity: 0;
   }
 
   .menu-mobile a:not(#category),
   .menu-mobile #section_category {
     background: var(--yellow1);
-    border: 2px solid var(--yellow2) !important;
+    border: 1px solid var(--black1) !important;
     border-radius: 5px !important;
     padding: 10px 15px !important;
     width: 100% !important;
@@ -277,10 +276,168 @@ header .show-items {
     margin: 5px 0px !important;
   }
 
-  .login-btn
-  {
+  .login-btn {
     font-size: 12px !important;
   }
 }
 
 /* Header End */
+
+/* Body Start */
+
+/* Intro Start */
+.con-intro img {
+  width: 45%;
+}
+.con-intro h1 {
+  font-size: 50px;
+  font-family: "rokhb" !important;
+  text-align: right !important;
+}
+.con-intro h1 span {
+  font-size: 50px;
+  font-family: "rokhb" !important;
+  color: var(--yellow2) !important;
+  text-align: right !important;
+}
+
+.con-intro h3 {
+  font-size: 34px;
+  font-family: "rokhb" !important;
+  text-align: right !important;
+  background: -webkit-linear-gradient(
+    left,
+    var(--yellow1),
+    var(--yellow2)
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.gradienttext {
+  text-align: center !important;
+  background: linear-gradient(
+    to right,
+    var(--yellow1) 10%,
+    var(--yellow2) 30%,
+    var(--yellow2) 70%,
+    var(--yellow1) 90%
+  );
+  background-size: 200% auto !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: lineartext 1.5s linear infinite !important;
+}
+@keyframes lineartext {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.con-intro input {
+  background: var(--white) !important;
+  font-size: 18px !important;
+  color: var(--black2) !important;
+  background-image: url(../img/search.svg) !important;
+  background-position: 2% !important;
+  background-size: 5% !important;
+  background-repeat: no-repeat !important;
+  padding: 25px !important;
+}
+
+.con-intro input::placeholder {
+  font-size: 18px !important;
+  color: var(--black2) !important;
+}
+
+.con-intro button {
+  padding: 10px 15px !important;
+  background: var(--yellow1);
+  color: var(--black1) !important;
+}
+.con-intro button:hover {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+@media (max-width: 1290px) {
+  .con-intro h1,
+  .con-intro h1 span {
+    font-size: 3vw;
+    font-family: "rokhb" !important;
+    text-align: center !important;
+    line-height: 60px !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  .con-intro h3 {
+    font-size: 2.5vw !important;
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .con-intro img {
+    width: 80%;
+  }
+  .con-intro h1,
+  .con-intro h1 span {
+    font-size: 5vw !important;
+  }
+
+  .con-intro h3 {
+    font-size: 3vw !important;
+  }
+}
+@media (max-width: 550px) {
+  .con-intro h1 {
+    font-size: 22px;
+    font-family: "rokhb" !important;
+    text-align: right !important;
+    line-height: 30px !important;
+  }
+  .con-intro h1 span {
+    font-size: 22px;
+    text-align: right !important;
+  }
+
+  .con-intro h3 {
+    font-size: 18px !important;
+    text-align: center !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-top: 18px !important;
+  }
+
+  .con-intro input {
+    font-size: 16px !important;
+    background-image: url(../img/search.svg) !important;
+    background-position: 10px !important;
+    background-size: 25px !important;
+    background-repeat: no-repeat !important;
+    padding: 20px !important;
+    width: 90% !important;
+    height: 35px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  .con-intro input::placeholder {
+    font-size: 16px !important;
+    color: var(--black2) !important;
+  }
+
+  .con-intro button {
+    font-size: 14px !important;
+    padding: 8px 14px !important;
+    height: 35px !important;
+    color: var(--black2) !important;
+  }
+}
+
+/* Intro End */
+
+/* Body End */
