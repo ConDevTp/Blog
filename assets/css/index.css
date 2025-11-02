@@ -828,6 +828,35 @@ header .show-items {
 
 footer {
   background: var(--yellow1) !important;
+  position: relative !important;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute !important;
+  left: -15% !important;
+  top: auto !important;
+  bottom: -20% !important;
+  background: linear-gradient(to right bottom, transparent, var(--black1));
+
+  border-radius: 200px !important;
+  opacity: 0.1;
+}
+
+footer::after {
+  content: "";
+  width: 300px !important;
+  height: 300px !important;
+  position: absolute !important;
+  right: -10% !important;
+  top: -50% !important;
+  background: linear-gradient(to left top, transparent, var(--black1));
+
+  border-radius: 200px !important;
+  opacity: 0.1;
 }
 
 .footer-title {
@@ -835,17 +864,26 @@ footer {
   font-size: 18px !important;
   text-align: right !important;
   color: var(--black3) !important;
+  position: relative !important;
+  z-index: 5 !important;
 }
 .footer-link {
   font-size: 16px !important;
   text-align: right !important;
   margin: 5px !important;
   color: var(--black1) !important;
+  position: relative !important;
+  z-index: 5 !important;
 }
 
 .footer-link:hover {
   color: var(--black3) !important;
   padding-right: 5px !important;
+}
+
+.aboutus {
+  position: relative !important;
+  z-index: 5 !important;
 }
 
 .aboutus p {
@@ -890,6 +928,31 @@ footer {
   .aboutus p {
     font-size: 14px !important;
     -webkit-line-clamp: 4 !important;
+  }
+
+  footer::before {
+    content: "";
+    width: 300px !important;
+    height: 300px !important;
+    position: absolute !important;
+    right: auto !important;
+    left: -10% !important;
+    top: auto !important;
+    bottom: -20% !important;
+    background: linear-gradient(to left bottom, transparent, var(--black1));
+    border-radius: 200px !important;
+  }
+
+  footer::after {
+    content: "";
+    width: 300px !important;
+    height: 300px !important;
+    position: absolute !important;
+    right: -30% !important;
+    top: -30% !important;
+    background: linear-gradient(to right top, transparent, var(--black1));
+    border-radius: 200px !important;
+    opacity: 0.1;
   }
 }
 
