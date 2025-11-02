@@ -63,6 +63,11 @@ function closeMenu() {
   document.getElementById("overlay").style.display = "none";
 }
 
+function toggleTheme() {
+  const html = document.documentElement;
+  html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+}
+
 // Header END
 
 // Body
@@ -93,3 +98,6 @@ btnPrevs.forEach((btn, index) => {
     containers[index].scrollLeft -= getBoxWidth(containers[index]);
   });
 });
+// -- Boxes END
+
+// Body END

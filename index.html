@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body
+    data-theme="light"
     id="body"
     class="d-flex justify-content-center align-items-center px-4 pt-3 flex-column"
   >
@@ -46,10 +47,15 @@
             placeholder="جستجو در بی باگ ..."
           />
         </div>
-
-        <button class="login-btn btn rounded d-none d-sm-block">
-          ورود / ثبت‌نام
-        </button>
+        <div class="d-flex justify-content-center align-items-center">
+          <label class="switch mx-4 d-none d-sm-flex">
+            <input type="checkbox" />
+            <span class="slider" onclick="toggleTheme()"></span>
+          </label>
+          <button class="login-btn btn rounded d-none d-sm-block">
+            ورود / ثبت‌نام
+          </button>
+        </div>
         <button
           class="menu-btn d-flex justify-content-center align-items-center shadow-lg d-sm-none"
           onclick="Toggle_Menu_Mobile()"
@@ -127,6 +133,16 @@
           <i class="fa fa-swatchbook"></i>
           طراحی
         </a>
+
+        <div
+          class="d-flex justify-content-between align-items-center w-100 mt-4 px-2 d-sm-none"
+        >
+          <small class="theme-text">تغییر تم:</small>
+          <label class="switch mx-4 d-flex d-sm-none">
+            <input type="checkbox" />
+            <span class="slider" onclick="toggleTheme()"></span>
+          </label>
+        </div>
       </div>
     </header>
 
