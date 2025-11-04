@@ -1,3 +1,4 @@
+@import url("./theme.css");
 /* Defult */
 @font-face {
   font-family: "Rokhl";
@@ -18,24 +19,6 @@
   src: url("../fonts/rokh/Rokh-Bold.otf");
   font-weight: normal;
   font-style: normal;
-}
-
-:root {
-  --white: #d6d6d6;
-  --yellow1: #ffee32;
-  --yellow2: #ffd100;
-  --black1: #202020;
-  --black2: #333533;
-  --black3: #000;
-}
-
-[data-theme="dark"] {
-  --white: #fbfcd4;
-  --yellow1: #efbc33;
-  --yellow2: #ffe336;
-  --black1: #151515;
-  --black2: #0a0a0a;
-  --black3: #000;
 }
 
 * {
@@ -467,6 +450,7 @@ header .show-items {
   .con-intro h1 span {
     font-size: 21px !important;
     text-align: right !important;
+    margin-top: 5px !important;
   }
 
   .con-intro h3 {
