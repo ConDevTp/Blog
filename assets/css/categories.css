@@ -1,24 +1,50 @@
 @import url("./theme.css");
 
-:root {
-  --white: #d6d6d6;
-  --yellow1: #ffee32;
-  --yellow2: #ffd100;
-  --black1: #202020;
-  --black2: #333533;
-  --black3: #000;
+
+
+.bg-categories {
+  position: absolute !important;
+  top: 179px !important;
+  left: 50px !important;
+  z-index: -1;
+  width: 100% !important;
+  filter: blur(5px);
+  opacity: 0.5;
 }
 
-[data-theme="dark"] {
-  --white: #fbfcd4;
-  --yellow1: #efbc33;
-  --yellow2: #ffe336;
-  --black1: #151515;
-  --black2: #0a0a0a;
-  --black3: #000;
+@media (max-width: 550px) {
+  .bg-categories {
+    position: absolute !important;
+    top: 80px !important;
+    left: 0px !important;
+    right: 0px !important;
+    z-index: -1;
+    width: 200% !important;
+    opacity: 0.5 !important;
+  filter: blur(0px) !important;
+
+  }
 }
 
 /* Intro Start */
+
+.btn-intro {
+  animation: pulse 1.2s ease-in-out infinite !important;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 @media (max-width: 550px) {
   .con-intro h1 {
@@ -32,11 +58,38 @@
     text-align: right !important;
   }
 }
+
 /* Intro End */
 
 /* Boxes Start */
-.box {
+.con-boxes-category {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0px !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-top: 30px !important;
+}
+
+.con-boxes-category::-webkit-scrollbar {
+  display: none;
+}
+
+.side .box {
   flex: 0 0 calc((100% / 3) - (30px * 2 / 3)) !important;
+}
+
+@media (max-width: 768px) {
+  .con-boxes-category {
+    gap: 20px !important;
+    padding-top: 10px !important;
+  }
+  .side .box {
+    flex: 0 0 calc((100% / 2) - (20px / 2)) !important;
+    padding: 12px !important;
+  }
 }
 /* Boxes END */
 
@@ -60,7 +113,7 @@
 
 @media (max-width: 550px) {
   .hashtag-item {
-    font-size: 9px !important;
+    font-size: 10px !important;
     padding: 2.5px 10px !important;
   }
 }
@@ -68,10 +121,9 @@
 /* hashtag ENd */
 
 /* side-right */
-.title-groups
-{
-    font-size: 16px !important;
-    font-family: "rokhm" !important;
+.title-groups {
+  font-size: 16px !important;
+  font-family: "rokhm" !important;
 }
 
 .side-right {
@@ -79,22 +131,86 @@
   padding-left: 30px !important;
 }
 
-
-
 .side-right .groups li {
   text-align: right !important;
-  background: var(--white) !important;
-  color: var(--black1) !important;
+  background: linear-gradient(to left, var(--black1), var(--black1)) !important;
+
   cursor: pointer;
 }
 
 .side-right .groups li:hover {
-  opacity: 0.9 !important;
+  background: linear-gradient(to left, var(--black2), var(--black1)) !important;
 }
 
 .side-right .groups .selected {
   text-align: right !important;
-  background: var(--yellow2) !important;
-  color: var(--black1) !important;
+  background: linear-gradient(to left, var(--black2), var(--black1)) !important;
+}
+
+@media (max-width: 992px) {
+  .w-md-100 {
+    width: 100% !important;
+  }
+  .side-right {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}
+@media (max-width: 550px) {
+  .title-groups {
+    font-size: 14px !important;
+  }
+
+  .list-group-item {
+    font-size: 14px !important;
+  }
 }
 /* side-right END */
+
+/* courses-category Start */
+.courses-category {
+  height: 90px !important;
+  background-color: var(--black1) !important;
+  padding: 10px !important;
+  cursor: pointer;
+}
+
+.courses-category:hover {
+  transform: scale(0.95) !important;
+}
+
+.courses-category img {
+  height: 100% !important;
+}
+
+.courses-category .conimg {
+  width: 120px !important;
+  height: 100% !important;
+  overflow: hidden;
+}
+
+.courses-category h3 {
+  font-size: 14px !important;
+  text-align: right !important;
+  line-height: 25px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.courses-category small {
+  font-size: 9px !important;
+  color: var(--yellow2) !important;
+  margin-top: 5px !important;
+}
+
+@media (max-width: 550px) {
+  .courses-category h3 {
+    font-size: 14px !important;
+  }
+}
+
+/* courses-category END */
