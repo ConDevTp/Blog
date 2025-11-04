@@ -1,6 +1,8 @@
 @import url("./theme.css");
 
-
+body {
+  overflow: hidden !important;
+}
 
 .bg-categories {
   position: absolute !important;
@@ -21,8 +23,8 @@
     z-index: -1;
     width: 200% !important;
     opacity: 0.5 !important;
-  filter: blur(0px) !important;
-
+    filter: blur(0px) !important;
+    max-width: 100% !important;
   }
 }
 
