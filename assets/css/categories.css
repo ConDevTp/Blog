@@ -24,7 +24,6 @@ body {
     width: 200% !important;
     opacity: 0.5 !important;
     filter: blur(0px) !important;
-    max-width: 100% !important;
   }
 }
 
