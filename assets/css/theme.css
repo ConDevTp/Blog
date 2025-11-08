@@ -8,10 +8,128 @@
 }
 
 [data-theme="dark"] {
+  --white: #fff;
+  --yellow1: #181305;
+  --yellow2: #151515;
+  --black1: #efbc33;
+  --black2: #efbc33;
+  --black3: #000;
+
+  header input {
+    background-color: var(--black1) !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  input::placeholder,
+  input,
+  .con-intro input,
+  .con-intro input::placeholder {
+    color: var(--yellow1) !important;
+  }
+
+  .box .box-title,
+  .box .box-text,
+  .box .btn,
+  .box i,
+  .carousel h5,
+  .footer-title,
+  .category-item h5 {
+    color: var(--black1) !important;
+    opacity: 1 !important;
+    filter: none;
+  }
+
+  .social {
+    border: 1px solid var(--black1) !important;
+  }
+  .m_title i,
+  .m_title h2,
+  .text-end {
+    color: var(--yellow1) !important;
+  }
+
+  .category-sm {
+    background: transparent !important;
+  }
+  .category-sm i {
+    color: #ffe336 !important;
+  }
+
+  .category-sm h3 {
+    color: var(--yellow1) !important;
+  }
+  header,
+  .box,
+  .menu-mobile,
+  footer {
+    background: linear-gradient(to left, #151515, #181305) !important;
+  }
+
+  .con-intro img {
+    filter: drop-shadow(10px 10px 0px #15151559) !important;
+  }
+
+  header {
+    box-shadow: none !important;
+  }
+
+  /* category */
+
+  .courses-category,
+  .list-group,
+  .hashtag-item {
+    border: 1px solid #00000071 !important;
+    box-shadow: none !important;
+    color: #000 !important;
+  }
+
+  .list-group > *,
+  .courses-category h3 {
+    color: #000 !important;
+  }
+}
+
+html[data-theme="light"]::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../img/bg.png);
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: right !important;
+  width: 100%;
+  height: 100%;
+}
+
+html[data-theme="light"]::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(../img/bg.png);
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: left !important;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1) !important;
+}
+/* :root {
+  --white: #fbfcd4;
+  --yellow1: #efbc33;
+  --yellow2: #ffe336;
+  --black1: #151515;
+  --black2: #0a0a0a;
+  --black3: #000;
+}
+
+[data-theme="dark"] {
   --white: #d6d6d6;
   --yellow1: #ffee32;
   --yellow2: #ffd100;
   --black1: #202020;
   --black2: #333533;
   --black3: #000;
-}
+} */

@@ -75,34 +75,6 @@ html {
   overflow-x: hidden !important;
 }
 
-html::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url(../img/bg.png);
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: right !important;
-  width: 100%;
-  height: 100%;
-}
-
-html::after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url(../img/bg.png);
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-  background-position: left !important;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: scaleX(-1) !important;
-  transform: scaleX(-1) !important;
-}
 
 /* Header Start */
 header {
@@ -341,6 +313,8 @@ header .show-items {
 /* Intro Start */
 .con-intro img {
   width: 45%;
+    filter: drop-shadow(5px 5px 0px var(--yellow1)) !important;
+
 }
 .con-intro h1 {
   font-size: 50px;
@@ -909,6 +883,22 @@ footer::after {
 
 .social:hover {
   transform: scale(0.9) !important;
+}
+
+.social:nth-child(1),
+.social:nth-child(2) {
+  padding: 8px !important;
+}
+
+.social:nth-child(3) {
+  padding: 6px !important;
+}
+
+.social:nth-child(4)
+{
+  padding: 0px !important;
+  padding: 7px !important;
+  padding-top: 12px !important;
 }
 
 .text-end span {

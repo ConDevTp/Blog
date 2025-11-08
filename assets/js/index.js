@@ -65,7 +65,18 @@ function closeMenu() {
 
 function toggleTheme() {
   const html = document.documentElement;
-  html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+  const currentTheme = html.dataset.theme;
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+  html.dataset.theme = newTheme;
+
+  // تغییر عکس‌ها
+  const images = document.querySelectorAll("img.theme-img");
+  images.forEach(img => {
+    const lightSrc = img.dataset.light;
+    const darkSrc = img.dataset.dark;
+    img.src = newTheme === "dark" ? darkSrc : lightSrc;
+  });
 }
 
 // Header END
