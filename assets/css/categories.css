@@ -1,217 +1,138 @@
-@import url("./theme.css");
+/* Body */
 
-body {
-  overflow: hidden !important;
+html::after,
+html::before {
+  display: none !important;
+}
+
+html[data-theme="dark"] {
+  body::before {
+    content: "";
+    position: absolute !important;
+    left: 0px !important;
+    right: 0px !important;
+    top: 0px !important;
+    width: 100vw !important;
+    height: 100svh !important;
+    background: linear-gradient(
+      to top,
+      var(--black1) 20%,
+      transparent
+    ) !important;
+    z-index: -1 !important;
+  }
+
+  .bg-categories {
+    position: absolute !important;
+    top: 0px !important;
+    left: 0px !important;
+    right: 0px !important;
+    height: 100vh !important;
+    width: 100vw !important;
+    filter: brightness(1) !important;
+    opacity: 0.2 !important;
+    z-index: -2 !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .breadcrumb .breadcrumb-item,
+  .breadcrumb a {
+    color: var(--yellow1) !important;
+  }
+
+  .see_all p,
+  .see_all i {
+    color: var(--yellow1) !important;
+  }
+  .see_all:hover > * {
+    color: var(--white) !important;
+  }
+}
+
+body::before {
+  content: "";
+  position: absolute !important;
+  left: 0px !important;
+  right: 0px !important;
+  top: 0px !important;
+  width: 100vw !important;
+  height: 100svh !important;
+  background: linear-gradient(
+    to top,
+    var(--black1) 20%,
+    transparent
+  ) !important;
+  z-index: -1 !important;
 }
 
 .bg-categories {
   position: absolute !important;
-  top: 179px !important;
-  left: 50px !important;
-  z-index: -1;
-  width: 100% !important;
-  filter: blur(5px);
-  opacity: 0.5;
+  top: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  filter: brightness(0.2) !important;
+  opacity: 1 !important;
+  z-index: -2 !important;
+  object-fit: cover !important;
+  object-position: center !important;
 }
 
-@media (max-width: 550px) {
-  .bg-categories {
-    position: absolute !important;
-    top: 80px !important;
-    left: 0px !important;
-    right: 0px !important;
-    z-index: -1;
-    width: 200% !important;
-    opacity: 0.5 !important;
-    filter: blur(0px) !important;
-  }
-}
+/* Section 1 */
 
-/* Intro Start */
-
-.btn-intro {
-  animation: pulse 1.2s ease-in-out infinite !important;
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(0.95);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@media (max-width: 550px) {
-  .con-intro h1 {
-    font-size: 25px !important;
-    font-family: "rokhb" !important;
-    text-align: right !important;
-    line-height: 30px !important;
-  }
-  .con-intro h1 span {
-    font-size: 25px !important;
-    text-align: right !important;
-  }
-}
-
-/* Intro End */
-
-/* Boxes Start */
-.con-boxes-category {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0px !important;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-top: 30px !important;
-}
-
-.con-boxes-category::-webkit-scrollbar {
-  display: none;
-}
-
-.side .box {
-  flex: 0 0 calc((100% / 3) - (30px * 2 / 3)) !important;
-}
-
-@media (max-width: 768px) {
-  .con-boxes-category {
-    gap: 20px !important;
-    padding-top: 10px !important;
-  }
-  .side .box {
-    flex: 0 0 calc((100% / 2) - (20px / 2)) !important;
-    padding: 12px !important;
-  }
-}
-/* Boxes END */
-
-/* hashtag Start */
-.hashtag-item {
-  padding: 5px 15px !important;
-  background: var(--black2) !important;
-  border-radius: 200px !important;
-  font-size: 12px !important;
-  margin: 5px !important;
-  filter: opacity(0.8);
-  cursor: pointer;
-}
-
-.hashtag-item:hover {
-  transform: scale(1.1) !important;
-  background: var(--yellow2) !important;
-  color: var(--black1) !important;
-  filter: opacity(1);
-}
-
-@media (max-width: 550px) {
-  .hashtag-item {
-    font-size: 10px !important;
-    padding: 2.5px 10px !important;
-  }
-}
-
-/* hashtag ENd */
-
-/* side-right */
-.title-groups {
-  font-size: 16px !important;
-  font-family: "rokhm" !important;
-}
-
-.side-right {
-  margin-top: 30px !important;
-  padding-left: 30px !important;
-}
-
-.side-right .groups li {
-  text-align: right !important;
-  background: linear-gradient(to left, var(--black1), var(--black1)) !important;
-
-  cursor: pointer;
-}
-
-.side-right .groups li:hover {
-  background: linear-gradient(to left, var(--black2), var(--black1)) !important;
-}
-
-.side-right .groups .selected {
-  text-align: right !important;
-  background: linear-gradient(to left, var(--black2), var(--black1)) !important;
-}
-
-@media (max-width: 992px) {
-  .w-md-100 {
-    width: 100% !important;
-  }
-  .side-right {
-    margin: 0px !important;
-    padding: 0px !important;
-  }
-}
-@media (max-width: 550px) {
-  .title-groups {
-    font-size: 14px !important;
-  }
-
-  .list-group-item {
-    font-size: 14px !important;
-  }
-}
-/* side-right END */
-
-/* courses-category Start */
-.courses-category {
-  height: 90px !important;
-  background-color: var(--black1) !important;
-  padding: 10px !important;
-  cursor: pointer;
-}
-
-.courses-category:hover {
-  transform: scale(0.95) !important;
-}
-
-.courses-category img {
-  height: 100% !important;
-}
-
-.courses-category .conimg {
-  width: 120px !important;
-  height: 100% !important;
-  overflow: hidden;
-}
-
-.courses-category h3 {
+.breadcrumb {
+  background-color: transparent !important;
   font-size: 14px !important;
-  text-align: right !important;
-  line-height: 25px !important;
+}
+
+.categories_input_search {
+  width: 140% !important;
+  font-size: 16px !important;
+  padding: 0px !important;
+  border-radius: 200px !important;
+}
+
+@media (max-width: 550px) {
+  .categories_input_search {
+    min-width: 140% !important;
+    font-size: 14px !important;
+    padding: 0px !important;
+    border-radius: 200px !important;
+  }
+}
+
+/* END Section 1 */
+
+/* Boxes */
+.see_all p,
+.see_all i {
   margin: 0px !important;
   padding: 0px !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
+  font-synthesis: 16px !important;
+  cursor: pointer;
 }
 
-.courses-category small {
-  font-size: 9px !important;
-  color: var(--yellow2) !important;
-  margin-top: 5px !important;
+.see_all i {
+  margin-right: 10px !important;
+  font-size: 12px !important;
+}
+
+.see_all:hover > * {
+  color: var(--yellow1) !important;
 }
 
 @media (max-width: 550px) {
-  .courses-category h3 {
-    font-size: 14px !important;
+  .see_all i {
+    margin-right: 5px !important;
+    font-size: 8px !important;
+  }
+  .see_all p {
+    font-size: 12px !important;
   }
 }
 
-/* courses-category END */
+/* END Boxes */
+
+/* END Body */

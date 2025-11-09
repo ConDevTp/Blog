@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>بی‌باگ — مقالات و آموزش‌های عملی برنامه‌نویسی</title>
     <meta
       name="title"
       content="بی‌باگ — مقالات و آموزش‌های عملی برنامه‌نویسی"
@@ -56,6 +55,7 @@
 
     <meta http-equiv="cleartype" content="on" />
 
+    <title>بی باگ - هوش مصنوعی</title>
     <!-- Site Icon -->
     <link rel="icon" href="./assets/img/logo.jpg" />
     <!-- Bootstrap -->
@@ -67,12 +67,15 @@
     />
     <!-- Custom Css -->
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/category.css" />
   </head>
   <body
     data-theme="light"
     id="body"
-    class="d-flex justify-content-center align-items-center px-4 pt-3 flex-column"
+    class="d-flex justify-content-center align-items-center px-4 pt-3 flex-column position-relative"
   >
+    <!-- bg-img -->
+    <img src="./assets/img/ai-blog.jpg" class="bg-categories" alt="" />
     <div id="overlay" onclick="closeMenu()"></div>
     <header class="d-flex flex-column w-100 p-3 rounded">
       <div
@@ -197,153 +200,568 @@
 
     <body class="w-100">
       <!-- Intro -->
-
       <div
-        class="d-flex justify-content-between align-items-center align-items-lg-start con-intro flex-column flex-lg-row-reverse mt-sm-5 mt-4 pt-1 pt-lg-0"
+        class="d-flex justify-content-between align-items-center align-items-lg-start con-intro flex-column flex-lg-row-reverse mt-sm-5 mt-4 pt-4 pt-lg-0 mb-lg-5"
       >
-        <img src="./assets/img/intro.png" alt="BiBag" class="img-fluid" />
-
         <div
-          class="d-flex justify-content-start align-items-start flex-column mt-4 pt-2 mt-sm-5 pt-sm-5 w-100 pl-sm-5"
+          class="d-flex justify-content-start align-items-start flex-column mt-4 pt-2 w-100 pl-sm-5"
         >
-          <h1 class="mt-sm-5 pt-sm-3">
-            تازه‌ترین <span class="gradienttext">آموزش‌ها</span>
-            در بی‌باگ
-          </h1>
-
-          <h3 class="mt-sm-5">چی برات جذابه امروز؟</h3>
-
-          <input
-            type="text"
-            class="form-control mt-4 shadow-sm d-flex"
-            placeholder="چی می خوای امروز یاد بگیری ؟"
-          />
-          <div
-            class="justify-content-end align-items-end w-100 mt-sm-4 mt-3 d-flex"
+          <h1
+            class="mt-sm-5 pt-sm-3 d-flex justify-content-center align-items-center flex-column"
           >
-            <button class="btn rounded shadow-sm">بزن بریم!</button>
-          </div>
+            مجموعه مقالات با موضوع
+            <br />
+            <span class="gradienttext mt-4 pt-2">هوش مصنوعی</span>
+          </h1>
         </div>
       </div>
       <!-- END Intro -->
 
-      <!-- Category -->
-      <div class="w-100 d-flex flex-column category mt-5 pt-2 pt-lg-0">
-        <div class="m_title w-100 text-right">
-          <div class="d-flex justify-content-start align-items-start">
-            <i class="fa fa-bug m-0 p-0 ml-3"></i>
-            <h2 class="m-0 p-0">دسته بندی های <span>بی باگ</span></h2>
+      <!-- hashtag -->
+      <div
+        class="con-hashtag d-flex justify-content-center align-items-center flex-column mt-2 mb-lg-5"
+      >
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="hashtag-item shadow-sm">Chat GPT</div>
+          <div class="hashtag-item shadow-sm">برنامه‌نویسی</div>
+          <div class="hashtag-item shadow-sm">فرانت اند</div>
+          <div class="hashtag-item shadow-sm">فرانت اند</div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mt-2">
+          <div class="hashtag-item shadow-sm">فرانت اند</div>
+          <div class="hashtag-item shadow-sm">بک اند</div>
+          <div class="hashtag-item shadow-sm">آموزش SQL</div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center con-intro">
+          <div
+            class="justify-content-center align-items-center w-100 mt-5 d-flex"
+          >
+            <a href="#down-box">
+              <button class="btn rounded-pill shadow-sm btn-intro">
+                بزن بریم!
+              </button>
+            </a>
           </div>
         </div>
+      </div>
+      <!-- END hashtag -->
+
+      <section
+        class="d-flex flex-column flex-lg-row-reverse justify-content-between align-items-start w-100 mt-5 pt-5 side"
+      >
+        <!-- Boxes -->
+        <div class="w-75 d-flex flex-column w-md-100" id="down-box">
+          <div
+            class="con-boxes-category w-100 d-flex justify-content-between align-items-center"
+          >
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box1.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box2.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box3.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="con-boxes-category w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
+          >
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box4.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box5.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box6.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="con-boxes-category w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
+          >
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box7.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box8.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box9.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="con-boxes-category w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
+          >
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box10.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box11.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="box rounded">
+              <img
+                src="./assets/img/box/box12.jpg"
+                class="w-100 rounded"
+                alt="box"
+              />
+
+              <h4 class="box-title w-100 mt-3 fw-bold">
+                مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی
+                پلاس
+              </h4>
+              <p class="box-text w-100">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                کتابهای زیادی در شصت و سه درصد
+              </p>
+
+              <div class="w-100 d-flex justify-content-end align-items-center">
+                <div
+                  class="d-flex justify-content-center align-items-center ml-2"
+                >
+                  <button class="btn m-0 p-0">ادامه مقاله</button>
+                  <i class="fa fa-arrow-left mr-2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Boxes -->
 
         <div
-          class="d-flex justify-content-between align-items-center con-category mt-lg-5 mt-4 pt-1"
+          class="w-25 d-flex flex-column justify-content-center align-items-start side-right w-md-100"
         >
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
+          <!-- One -->
+          <div
+            class="w-100 d-flex flex-column align-items-start justify-content-center mt-5 mt-lg-0"
           >
-            <img src="./assets/img/category_css.jpg" class="w-100" alt="CSS" />
-            <h5>استایل‌دهی</h5>
-          </a>
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
-          >
-            <img
-              src="./assets/img/category_data.jpg"
-              class="w-100"
-              alt="data"
-            />
-            <h5>پایگاه‌داده</h5>
-          </a>
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
-          >
-            <img
-              src="./assets/img/category_internet.jpg"
-              class="w-100"
-              alt="internet"
-            />
-            <h5>اینترنت</h5>
-          </a>
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
-          >
-            <img
-              src="./assets/img/category_design.jpg"
-              class="w-100"
-              alt="design"
-            />
-            <h5>دیزاین</h5>
-          </a>
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
-          >
-            <img src="./assets/img/category_ai.jpg" class="w-100" alt="ai" />
-            <h5>هوش‌مصنوعی</h5>
-          </a>
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
-          >
-            <img
-              src="./assets/img/category_machin.jpg"
-              class="w-100"
-              alt="machin"
-            />
-            <h5>ماشین‌لرنینگ</h5>
-          </a>
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
-          >
-            <img
-              src="./assets/img/category_programmer.jpg"
-              class="w-100"
-              alt="programmer"
-            />
-            <h5>برنامه‌نویسی</h5>
-          </a>
-          <a
-            href="./category.html"
-            class="category-item d-flex justify-content-center align-items-center flex-column"
-          >
-            <img
-              src="./assets/img/category_pyton.jpg"
-              class="w-100"
-              alt="pyton"
-            />
-            <h5>پایتون</h5>
-          </a>
-        </div>
-      </div>
-      <!-- END Category -->
+            <div
+              id="carouselExampleSlidesOnly"
+              class="carousel slide shadow shadow-sm rounded"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./assets/img/box/box10.jpg"
+                    class="d-block w-100"
+                    alt="بی باگ"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/box/box14.jpg"
+                    class="d-block w-100"
+                    alt="بی باگ"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/box/box5.jpg"
+                    class="d-block w-100"
+                    alt="بی باگ"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- Category sm -->
-      <div
-        class="d-flex justify-content-around align-items-center category-sm w-100 rounded mt-4 mt-lg-5"
-      >
-        <i class="fa fa-star"></i>
-        <h3>برنامه نویسی</h3>
-        <i class="fa fa-star"></i>
-        <h3>هوش مصنوعی</h3>
-        <i class="fa fa-star d-none d-lg-inline-block"></i>
-        <h3 class="d-none d-lg-inline-block">ماشین‌لرنینگ</h3>
-        <i class="fa fa-star"></i>
-        <h3>ارز دیجیتال</h3>
-        <i class="fa fa-star d-none d-lg-inline-block"></i>
-        <h3 class="d-none d-lg-inline-block">اینترنت</h3>
-        <i class="fa fa-star d-none d-lg-inline-block"></i>
-        <h3 class="d-none d-lg-inline-block">دیزاین</h3>
-        <i class="fa fa-star d-none d-lg-inline-block"></i>
-        <h3 class="d-none d-lg-inline-block">استایل‌دهی</h3>
-        <i class="fa fa-star"></i>
-      </div>
-      <!-- END Category sm  -->
+          <!-- Two -->
+          <div
+            class="w-100 d-flex flex-column align-items-start justify-content-center mt-5"
+          >
+            <h4 class="title-groups my-0 py-0">هشتک های مرتبط :</h4>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+              <div class="hashtag-item shadow-sm">برنامه‌نویسی</div>
+              <div class="hashtag-item shadow-sm">فرانت اند</div>
+              <div class="hashtag-item shadow-sm">فرانت اند</div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mt-2">
+              <div class="hashtag-item shadow-sm">فرانت اند</div>
+              <div class="hashtag-item shadow-sm">آموزش SQL</div>
+            </div>
+          </div>
+
+          <!-- Three -->
+          <div
+            class="w-100 d-flex flex-column align-items-start justify-content-center mt-5"
+          >
+            <h4 class="title-groups my-0 py-0">دسته بندی ها:</h4>
+
+            <ul class="list-group w-100 groups rounded mt-3 shadow shadow-sm">
+              <li class="list-group-item">برنامه نویسی</li>
+              <li class="list-group-item selected">هوش مصنوعی</li>
+              <li class="list-group-item">آموزش SQL</li>
+              <li class="list-group-item">مهندسی نرم‌افزار</li>
+              <li class="list-group-item">طراح گرافیک</li>
+            </ul>
+          </div>
+
+          <!-- Four -->
+          <div
+            class="w-100 d-flex flex-column align-items-start justify-content-center mt-5"
+          >
+            <h4 class="title-groups my-0 py-0">دوره‌های پیشنهادی :</h4>
+
+            <div
+              class="d-flex align-items-start w-100 courses-category rounded shadow-sm mt-4"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center rounded shadow-lg conimg"
+              >
+                <img src="./assets/img/box/box8.jpg" alt="" />
+              </div>
+              <div
+                class="d-flex flex-column align-items-start pr-3 h-100 justify-content-between w-75"
+              >
+                <h3>چگونه وبلاگ بسازیم؟ + انتخاب پلتفرم زنده روبه رشد</h3>
+                <small>(رایگان)</small>
+              </div>
+            </div>
+
+            <div
+              class="d-flex align-items-start w-100 courses-category rounded shadow-sm mt-3"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center rounded shadow-lg conimg"
+              >
+                <img src="./assets/img/box/box17.jpg" alt="" />
+              </div>
+              <div
+                class="d-flex flex-column align-items-start pr-3 h-100 justify-content-between w-75"
+              >
+                <h3>چگونه وبلاگ بسازیم؟ + انتخاب پلتفرم زنده روبه رشد</h3>
+
+                <small>(رایگان)</small>
+              </div>
+            </div>
+
+            <div
+              class="d-flex align-items-start w-100 courses-category rounded shadow-sm mt-3"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center rounded shadow-lg conimg"
+              >
+                <img src="./assets/img/box/box14.jpg" alt="" />
+              </div>
+              <div
+                class="d-flex flex-column align-items-start pr-3 h-100 justify-content-between w-75"
+              >
+                <h3>چگونه وبلاگ بسازیم؟ + انتخاب پلتفرم زنده روبه رشد</h3>
+
+                <small>(رایگان)</small>
+              </div>
+            </div>
+
+            <div
+              class="d-flex align-items-start w-100 courses-category rounded shadow-lg mt-3"
+            >
+              <div
+                class="d-flex justify-content-center align-items-center rounded shadow-sm conimg"
+              >
+                <img src="./assets/img/box/box12.jpg" alt="" />
+              </div>
+              <div
+                class="d-flex flex-column align-items-start pr-3 h-100 justify-content-between w-75"
+              >
+                <h3>چگونه وبلاگ بسازیم؟ + انتخاب پلتفرم زنده روبه رشد</h3>
+
+                <small>(رایگان)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Boxes -->
       <div class="w-100 d-flex flex-column mt-5 pt-1 pt-sm-5">
@@ -351,8 +769,8 @@
           class="m_title w-100 text-right mt-2 d-flex justify-content-between align-items-center"
         >
           <div class="d-flex justify-content-start align-items-start">
-            <i class="fa fa-bug m-0 p-0 ml-3"></i>
-            <h2 class="m-0 p-0">آخرین مقالات <span>بی باگ</span></h2>
+            <i class="fa fa-quote-right m-0 p-0 ml-3"></i>
+            <h2 class="m-0 p-0">مقالات پیشنهادی</h2>
           </div>
 
           <div class="d-flex justify-content-between align-items-center">
@@ -372,404 +790,6 @@
         <div
           class="con-boxes w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
         >
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box6.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box7.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box8.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box9.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box10.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END Boxes -->
-
-      <!-- Boxes -->
-      <div class="w-100 d-flex flex-column mt-5 pt-1 pt-sm-5">
-        <div
-          class="m_title w-100 text-right mt-2 d-flex justify-content-between align-items-center"
-        >
-          <div class="d-flex justify-content-start align-items-start">
-            <i class="fa fa-bug m-0 p-0 ml-3"></i>
-            <h2 class="m-0 p-0">مقالات برنامه نویسی <span>بی باگ</span></h2>
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <div
-              class="btn-title btn-next d-flex justify-content-center align-items-center"
-            >
-              <i class="fa fa-angle-right m-0 p-0"></i>
-            </div>
-            <div
-              class="btn-title btn-prev d-flex justify-content-center align-items-center mr-2"
-            >
-              <i class="fa fa-angle-left m-0 p-0"></i>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="con-boxes w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
-        >
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box1.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box2.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box3.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box4.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box5.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END Boxes -->
-
-      <!-- Boxes -->
-      <div
-        class="w-100 d-flex flex-column mt-5 pt-1 pt-sm-5 mb-3 mb-lg-5 pb-lg-3"
-      >
-        <div
-          class="m_title w-100 text-right mt-2 d-flex justify-content-between align-items-center"
-        >
-          <div class="d-flex justify-content-start align-items-start">
-            <i class="fa fa-bug m-0 p-0 ml-3"></i>
-            <h2 class="m-0 p-0">مقالات پیشنهادی <span>بی باگ</span></h2>
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <div
-              class="btn-title btn-next d-flex justify-content-center align-items-center"
-            >
-              <i class="fa fa-angle-right m-0 p-0"></i>
-            </div>
-            <div
-              class="btn-title btn-prev d-flex justify-content-center align-items-center mr-2"
-            >
-              <i class="fa fa-angle-left m-0 p-0"></i>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="con-boxes w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
-        >
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box11.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box rounded">
-            <img
-              src="./assets/img/box/box12.jpg"
-              class="w-100 rounded"
-              alt="box"
-            />
-
-            <h4 class="box-title w-100 mt-3 fw-bold">
-              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
-            </h4>
-            <p class="box-text w-100">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-              کتابهای زیادی در شصت و سه درصد
-            </p>
-
-            <div class="w-100 d-flex justify-content-end align-items-center">
-              <div
-                class="d-flex justify-content-center align-items-center ml-2"
-              >
-                <button class="btn m-0 p-0">ادامه مقاله</button>
-                <i class="fa fa-arrow-left mr-2"></i>
-              </div>
-            </div>
-          </div>
-
           <div class="box rounded">
             <img
               src="./assets/img/box/box13.jpg"
@@ -853,116 +873,7 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- END Boxes -->
 
-      <!-- Slider Start -->
-      <div
-        id="carouselExampleDark"
-        class="carousel carousel-dark slide mt-5"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <a href="#" class="carousel-item active" data-bs-interval="10000">
-            <img
-              src="./assets/img/box/box6.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div
-              class="carousel-caption d-flex flex-column justify-content-center align-items-center"
-            >
-              <h5>روانشناسی ترید در بازارها</h5>
-              <p class="mt-3">
-                هوش مصنوعی در پزشکی – راهنمای جامع برای متخصصان سلامت
-              </p>
-            </div>
-          </a>
-          <a href="#" class="carousel-item" data-bs-interval="2000">
-            <img
-              src="./assets/img/box/box10.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div
-              class="carousel-caption d-flex flex-column justify-content-center align-items-center"
-            >
-              <h5>روانشناسی ترید در بازارها</h5>
-              <p class="mt-3">
-                هوش مصنوعی در پزشکی – راهنمای جامع برای متخصصان سلامت
-              </p>
-            </div>
-          </a>
-          <a href="#" class="carousel-item">
-            <img
-              src="./assets/img/box/box16.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div
-              class="carousel-caption d-flex flex-column justify-content-center align-items-center"
-            >
-              <h5>روانشناسی ترید در بازارها</h5>
-              <p class="mt-3">
-                هوش مصنوعی در پزشکی – راهنمای جامع برای متخصصان سلامت
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Slider End -->
-
-      <!-- Boxes -->
-      <div class="w-100 d-flex flex-column mt-5 pt-1 pt-sm-5">
-        <div
-          class="m_title w-100 text-right mt-2 d-flex justify-content-between align-items-center"
-        >
-          <div class="d-flex justify-content-start align-items-start">
-            <i class="fa fa-bug m-0 p-0 ml-3"></i>
-            <h2 class="m-0 p-0">مقالات هوش مصنوعی <span>بی باگ</span></h2>
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <div
-              class="btn-title btn-next d-flex justify-content-center align-items-center"
-            >
-              <i class="fa fa-angle-right m-0 p-0"></i>
-            </div>
-            <div
-              class="btn-title btn-prev d-flex justify-content-center align-items-center mr-2"
-            >
-              <i class="fa fa-angle-left m-0 p-0"></i>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="con-boxes w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
-        >
           <div class="box rounded">
             <img
               src="./assets/img/box/box16.jpg"
@@ -991,6 +902,66 @@
             </div>
           </div>
 
+          <div class="box rounded">
+            <img
+              src="./assets/img/box/box6.jpg"
+              class="w-100 rounded"
+              alt="box"
+            />
+
+            <h4 class="box-title w-100 mt-3 fw-bold">
+              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
+            </h4>
+            <p class="box-text w-100">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد
+            </p>
+
+            <div class="w-100 d-flex justify-content-end align-items-center">
+              <div
+                class="d-flex justify-content-center align-items-center ml-2"
+              >
+                <button class="btn m-0 p-0">ادامه مقاله</button>
+                <i class="fa fa-arrow-left mr-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Boxes -->
+
+      <!-- Boxes -->
+      <div
+        class="w-100 d-flex flex-column mt-5 pt-1 pt-sm-4 mb-3 mb-lg-5 pb-lg-3"
+      >
+        <div
+          class="m_title w-100 text-right mt-2 d-flex justify-content-between align-items-center"
+        >
+          <div class="d-flex justify-content-start align-items-start">
+            <i class="fa fa-quote-right m-0 p-0 ml-3"></i>
+            <h2 class="m-0 p-0">مقالات به روز</h2>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div
+              class="btn-title btn-next d-flex justify-content-center align-items-center"
+            >
+              <i class="fa fa-angle-right m-0 p-0"></i>
+            </div>
+            <div
+              class="btn-title btn-prev d-flex justify-content-center align-items-center mr-2"
+            >
+              <i class="fa fa-angle-left m-0 p-0"></i>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="con-boxes w-100 d-flex justify-content-between align-items-center mt-3 mt-sm-3"
+        >
           <div class="box rounded">
             <img
               src="./assets/img/box/box17.jpg"
@@ -1049,7 +1020,7 @@
 
           <div class="box rounded">
             <img
-              src="./assets/img/box/box3.jpg"
+              src="./assets/img/box/box5.jpg"
               class="w-100 rounded"
               alt="box"
             />
@@ -1077,7 +1048,35 @@
 
           <div class="box rounded">
             <img
-              src="./assets/img/box/box8.jpg"
+              src="./assets/img/box/box10.jpg"
+              class="w-100 rounded"
+              alt="box"
+            />
+
+            <h4 class="box-title w-100 mt-3 fw-bold">
+              مزایای ChatGPT Plus چیست؟ – کاربردها و قابلیت های چت جی پی تی پلاس
+            </h4>
+            <p class="box-text w-100">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+              کتابهای زیادی در شصت و سه درصد
+            </p>
+
+            <div class="w-100 d-flex justify-content-end align-items-center">
+              <div
+                class="d-flex justify-content-center align-items-center ml-2"
+              >
+                <button class="btn m-0 p-0">ادامه مقاله</button>
+                <i class="fa fa-arrow-left mr-2"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="box rounded">
+            <img
+              src="./assets/img/box/box15.jpg"
               class="w-100 rounded"
               alt="box"
             />
