@@ -1095,3 +1095,23 @@ footer::after {
     }
   }
 }
+
+/*  Components  */
+
+.breadcrumb {
+  background-color: transparent !important;
+  font-size: 14px !important;
+}
+
+html[data-theme="dark"] {
+  .breadcrumb .breadcrumb-item,
+  .breadcrumb a {
+    color: var(--yellow1) !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .breadcrumb {
+    font-size: 12px !important;
+  }
+}

@@ -82,10 +82,7 @@ body::before {
 
 /* Section 1 */
 
-.breadcrumb {
-  background-color: transparent !important;
-  font-size: 14px !important;
-}
+
 
 .categories_input_search {
   width: 140% !important;

@@ -1,0 +1,50 @@
+.con-intro-404 img {
+  width: 50% !important;
+  margin-bottom: 0px !important;
+}
+
+.con-intro-404 h1 {
+  font-family: "rokhb" !important;
+  font-size: 50px !important;
+  margin-top: 0px !important;
+}
+
+.con-intro-404 span {
+  font-family: "rokhb" !important;
+  font-size: 50px !important;
+  color: var(--yellow1) !important;
+}
+
+.btn-404 {
+  padding: 10px 15px !important;
+  border-radius: 7px !important;
+  background: var(--yellow1) !important;
+  color: var(--black1) !important;
+  font-size: 16px !important;
+}
+.btn-404:hover {
+  transform: scale(0.95) !important;
+  opacity: 0.7 !important;
+}
+
+@media (max-width: 550px) {
+  .con-intro-404 img {
+    width: 80% !important;
+    margin-bottom: 0px !important;
+  }
+
+  .con-intro-404 h1,
+  .con-intro-404 span {
+    font-family: "rokhb" !important;
+    font-size: 20px !important;
+    margin-top: 0px !important;
+  }
+
+  .btn-404 {
+    padding: 5px 10px !important;
+    border-radius: 7px !important;
+    background: var(--yellow1) !important;
+    color: var(--black1) !important;
+    font-size: 12px !important;
+  }
+}
