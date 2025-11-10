@@ -553,43 +553,6 @@ header .show-items {
 
 /* Categories End */
 
-/* category-sm Start */
-
-.category-sm {
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--black3),
-    transparent
-  ) !important;
-  padding: 20px !important;
-}
-
-.category-sm h3 {
-  font-size: 18px !important;
-  margin: 0px !important;
-  padding: 0px !important;
-}
-
-.category-sm i {
-  color: var(--yellow2) !important;
-  font-size: 20px !important;
-  margin: 0px !important;
-  padding: 0px !important;
-}
-
-@media (max-width: 550px) {
-  .category-sm h3 {
-    font-size: 11px !important;
-  }
-
-  .category-sm i {
-    font-size: 11px !important;
-  }
-}
-
-/* category-sm End */
-
 /* Boxes Start  */
 
 .box {
