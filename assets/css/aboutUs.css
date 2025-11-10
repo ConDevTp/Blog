@@ -1,3 +1,23 @@
+html[data-theme="dark"] {
+  .section1 p,
+  .section1 span,
+  .section1 h3,
+  .text-about,
+  .boxitemshow p,
+  .boxitemshowclose p,
+  .boxitem h3 {
+    color: var(--black3) !important;
+  }
+
+  .intro-aboutUs img {
+    border: 2px solid var(--black1) !important;
+  }
+
+  .intro-aboutUs::after {
+    opacity: 0.4;
+  }
+}
+
 /* Intro */
 .intro-aboutUs {
   position: relative !important;
@@ -17,6 +37,7 @@
   inset: 0px !important;
   background: var(--yellow1) !important;
   z-index: 1 !important;
+  opacity: 0.9 !important;
 }
 .intro-aboutUs::after {
   content: "";
@@ -26,9 +47,9 @@
   inset: 0px !important;
   background-image: url(../img/con-aboutUs.png) !important;
   background-size: cover !important;
-  background-position: bottom center !important;
+  background-position: top center !important;
   background-repeat: no-repeat !important;
-  opacity: 0.05;
+  opacity: 0.1;
   z-index: 2 !important;
   object-fit: cover !important;
   object-position: center !important;
@@ -77,6 +98,21 @@
   background: var(--yellow1) !important;
   width: 32% !important;
   padding: 30px !important;
+  opacity: 0.9 !important;
+}
+
+.text-about {
+  font-size: 18px !important;
+  text-align: right !important;
+  line-height: 35px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.box-description:nth-child(2) {
+  background: var(--yellow2) !important;
 }
 .box-description h4 {
   text-align: center !important;
@@ -101,6 +137,12 @@
 }
 
 @media (max-width: 554px) {
+  .text-about {
+    font-size: 14px !important;
+    line-height: 30px !important;
+    text-align: center !important;
+  }
+
   .box-description {
     background: var(--yellow1) !important;
     width: 100% !important;
@@ -109,10 +151,269 @@
 
   .box-description h4 {
     font-size: 16px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 
   .box-description p {
     font-size: 14px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
   }
 }
 /* END Description  */
+
+/* section1 */
+
+.section1 img {
+  width: 40% !important;
+}
+
+.section1 h3 {
+  font-size: 25px !important;
+  font-family: "rokhm" !important;
+  text-align: right !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.section1 span {
+  font-size: 14px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-left: 10px !important;
+  margin-top: -6px !important;
+}
+
+.section1 p {
+  font-size: 18px !important;
+  line-height: 40px !important;
+  text-align: justify !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 554px) {
+  .section1 img {
+    width: 90% !important;
+  }
+
+  .section1 h3 {
+    font-size: 18px !important;
+    text-align: right !important;
+  }
+
+  .section1 span {
+    font-size: 10px !important;
+    margin-left: 5px !important;
+    margin-top: -2px !important;
+  }
+
+  .section1 p {
+    font-size: 14px !important;
+    line-height: 30px !important;
+    text-align: center !important;
+    -webkit-line-clamp: 6 !important;
+    padding: 0px 10px !important;
+  }
+}
+
+/* END section1 */
+
+/* Weblog  */
+
+.blognew {
+  width: 20% !important;
+  background-color: var(--yellow1) !important;
+  border-radius: 7px !important;
+  padding: 12px !important;
+  backdrop-filter: blur(200px) !important;
+  opacity: 0.9 !important;
+}
+
+.blognew:hover {
+  background-color: var(--yellow2) !important;
+}
+
+.blognew:hover .btnblog i,
+.blognew:hover .btnblog p {
+  color: var(--black1) !important;
+}
+
+.blognew img {
+  width: 100% !important;
+  min-height: 230px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 7px !important;
+}
+
+.blognew h3 {
+  font-size: 16px !important;
+  text-align: right !important;
+  text-align-last: right !important;
+  color: var(--black1) !important;
+  font-family: "rokhm" !important;
+}
+
+.blognew p {
+  font-size: 14px !important;
+  text-align: right !important;
+  text-align-last: right !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+  overflow: hidden !important;
+  line-height: 200% !important;
+  color: var(--black1) !important;
+}
+
+.btnblog p {
+  font-size: 12px !important;
+  color: var(--black1) !important;
+
+  padding: 0px !important;
+  margin: 0px !important;
+  margin-left: 5px !important;
+}
+
+.btnblog i {
+  font-size: 12px !important;
+  color: var(--black1) !important;
+}
+
+.blognew:nth-child(1),
+.blognew:nth-child(5) {
+  transform: scale(0.8) !important;
+}
+
+.blognew:nth-child(2) {
+  transform: scale(0.9) translateX(15px) !important;
+}
+
+.blognew:nth-child(4) {
+  transform: scale(0.9) translateX(-15px) !important;
+}
+
+@media (max-width: 992px) {
+  .blognew {
+    min-width: 100% !important;
+    border-radius: 7px !important;
+    padding: 12px !important;
+    backdrop-filter: blur(200px) !important;
+  }
+
+  .blognew:nth-child(1),
+  .blognew:nth-child(2),
+  .blognew:nth-child(4),
+  .blognew:nth-child(5) {
+    transform: scale(0.9) translateX(0px) !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    z-index: -10 !important;
+  }
+
+  .blognew:nth-child(3) {
+    position: relative !important;
+    transform: scale(1) !important;
+  }
+}
+/* END Weblog  */
+
+/* Question */
+
+.boxitem {
+  padding: 30px 0px !important;
+  overflow: hidden !important;
+  cursor: pointer;
+  padding-bottom: 20px !important;
+}
+
+.borderselected {
+  border-top: 1px solid var(--yellow1) !important;
+}
+
+.borderbotm {
+  border-top: 1px solid var(--yellow1) !important;
+}
+
+.boxitemshow {
+  padding: 10px !important;
+  font-size: 18px !important;
+  overflow: hidden !important;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boxitemshowclose {
+  height: 0px;
+  padding: 0px !important;
+
+  font-size: 18px !important;
+  overflow: hidden !important;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boxitemshow p,
+.boxitemshowclose p {
+  font-size: 18px !important;
+  text-align: right !important;
+  text-align-last: right !important;
+  line-height: 35px;
+  font-weight: 100 !important;
+}
+
+.boxitem h3 {
+  font-size: 20px !important;
+  font-weight: 100 !important;
+  text-align: right !important;
+
+  text-align-last: right !important;
+}
+
+.boxitem img {
+  width: 30px !important;
+}
+
+@media (max-width: 992px) {
+  .w-md100 {
+    width: 100% !important;
+  }
+}
+@media (max-width: 600px) {
+  .bgfooter .textheader h3 {
+    font-size: 18px !important;
+  }
+
+  .boxitem {
+    padding: 15px 0px !important;
+    padding-bottom: 7px !important;
+  }
+
+  .boxitemshow p {
+    font-size: 14px !important;
+  }
+
+  .boxitem h3 {
+    font-size: 14px !important;
+    line-height: 35px !important;
+    margin-left: 10px !important;
+  }
+
+  .boxitem img:nth-child(2) {
+    width: 20px !important;
+    margin-top: -10px !important;
+  }
+}
+/* END Question */

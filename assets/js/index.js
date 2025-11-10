@@ -72,7 +72,7 @@ function toggleTheme() {
 
   // تغییر عکس‌ها
   const images = document.querySelectorAll("img.theme-img");
-  images.forEach(img => {
+  images.forEach((img) => {
     const lightSrc = img.dataset.light;
     const darkSrc = img.dataset.dark;
     img.src = newTheme === "dark" ? darkSrc : lightSrc;
@@ -112,3 +112,54 @@ btnPrevs.forEach((btn, index) => {
 // -- Boxes END
 
 // Body END
+
+// About Us - For Blogs
+
+function changeblog() {
+  var items = document.getElementsByClassName("blognew");
+  var lastelement = items[4].cloneNode(true);
+
+  items[4].remove();
+
+  var conblog = document.getElementById("conblogs");
+  conblog.prepend(lastelement);
+
+  changeblogdown();
+}
+
+function changeblogdown() {
+  var items = document.getElementsByClassName("formyblog1");
+  const node = items[0];
+  const clone = node.cloneNode(true);
+  items[0].remove();
+  document.getElementById("formyblog").appendChild(clone);
+}
+
+setInterval(changeblog, 4000);
+
+// About Us - END For Blogs
+// About Us - For Question
+function openticket(obj, obj1, obj3) {
+  if (document.getElementById(obj).classList.contains("boxitemshow")) {
+    document.getElementById(obj).classList.remove("boxitemshow");
+    document.getElementById(obj).classList.add("boxitemshowclose");
+    document.getElementById(obj1).src = "./assets/img/up.svg";
+  } else {
+    document.getElementById(obj).classList.add("boxitemshow");
+    document.getElementById(obj).classList.remove("boxitemshowclose");
+    document.getElementById(obj1).src = "./assets/img/down.svg";
+  }
+
+  if (
+    obj3.getElementsByClassName("boxitem")[0].classList.contains("borderbotm")
+  ) {
+    obj3.getElementsByClassName("boxitem")[0].classList.remove("borderbotm");
+    obj3.getElementsByClassName("boxitem")[0].classList.add("borderselected");
+  } else {
+    obj3.getElementsByClassName("boxitem")[0].classList.add("borderbotm");
+    obj3
+      .getElementsByClassName("boxitem")[0]
+      .classList.remove("borderselected");
+  }
+}
+// About Us - END For Question
