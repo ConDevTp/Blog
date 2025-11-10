@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>بی‌باگ — مقالات و آموزش‌های عملی برنامه‌نویسی</title>
+    <meta
+      name="title"
+      content="بی‌باگ — مقالات و آموزش‌های عملی برنامه‌نویسی"
+    />
+    <meta
+      name="description"
+      content="در بی‌باگ با آموزش‌های کاربردی، رفع باگ‌های رایج و راه‌حل‌های عملی، کدنویسی را ساده و بدون استرس یاد بگیر. مناسب برای مبتدی تا حرفه‌ای."
+    />
+    <meta
+      name="keywords"
+      content="برنامه‌نویسی, آموزش برنامه‌نویسی, رفع باگ, وب‌دیولپمنت, کدنویسی, JavaScript, Python"
+    />
+    <meta name="author" content="بی‌باگ" />
+    <meta name="robots" content="index, follow" />
+
+    <meta name="language" content="fa-IR" />
+
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="بی‌باگ — آموزش‌های برنامه‌نویسی بدون استرس"
+    />
+    <meta
+      property="og:description"
+      content="یادگیری ساده و بی‌استرس برنامه‌نویسی همراه با رفع باگ‌های واقعی."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="بی‌باگ — آموزش‌های برنامه‌نویسی بدون استرس"
+    />
+    <meta
+      name="twitter:description"
+      content="مقالات و آموزش‌های کاربردی برنامه‌نویسی برای رشد سریع و بدون باگ."
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "بی‌باگ",
+        "description": "آموزش‌های کاربردی برنامه‌نویسی و راهکارهای رفع باگ",
+        "logo": "",
+        "sameAs": []
+      }
+    </script>
+
+    <meta http-equiv="cleartype" content="on" />
+
+    <!-- Site Icon -->
+    <link rel="icon" href="./assets/img/logo.jpg" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css" />
+    <!-- Fontawsome -->
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/aboutUs.css" />
+  </head>
+  <body
+    data-theme="light"
+    id="body"
+    class="d-flex justify-content-center align-items-center px-4 pt-3 flex-column"
+  >
+    <div id="overlay" onclick="closeMenu()"></div>
+    <header class="d-flex flex-column w-100 p-3 rounded">
+      <div
+        class="w-100 d-flex justify-content-between align-items-center flex-row-reverse flex-sm-row"
+      >
+        <div
+          class="d-flex justify-content-sm-center justify-content-between align-items-center flex-row-reverse flex-sm-row w-sm-100"
+        >
+          <a
+            href="#"
+            class="d-flex justify-content-between align-items-center logo"
+          >
+            <img
+              src="./assets/img/logo.jpg"
+              alt="BiBag"
+              class="img-fluid rounded shadow-sm"
+            />
+            <small class="mx-2 d-none d-sm-flex">بی باگ</small>
+          </a>
+
+          <input
+            type="search"
+            class="form-control mr-3 mr-sm-4"
+            placeholder="جستجو در بی باگ ..."
+          />
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <label class="switch mx-4 d-none d-sm-flex">
+            <input type="checkbox" />
+            <span class="slider" onclick="toggleTheme()"></span>
+          </label>
+          <button class="login-btn btn rounded d-none d-sm-block">
+            ورود / ثبت‌نام
+          </button>
+        </div>
+        <button
+          class="menu-btn d-flex justify-content-center align-items-center shadow-lg d-sm-none"
+          onclick="Toggle_Menu_Mobile()"
+        >
+          <i class="fa fa-bars m-0 p-0"></i>
+        </button>
+      </div>
+
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-start align-items-start align-items-md-center header-menu mt-3 pt-1 position-relative menu-mobile"
+        id="menu_mobile"
+      >
+        <div
+          class="d-flex justify-content-between align-items-center mb-3 mt-1 w-100 d-sm-none"
+        >
+          <button
+            class="menu-btn d-flex justify-content-center align-items-center d-sm-none"
+            style="width: fit-content !important"
+            onclick="Toggle_Menu_Mobile()"
+          >
+            <i
+              style="font-size: 16px !important"
+              class="fa fa-times m-0 p-0"
+            ></i>
+          </button>
+
+          <button class="login-btn btn rounded">ورود / ثبت‌نام</button>
+        </div>
+        <div class="position-relative w-auto" id="section_category">
+          <a onclick="ShowMenuItems()" id="category">
+            <i class="fa fa-cogs"></i>
+
+            دسته بندی ها
+            <i class="fa fa-angle-down" id="arrow-menu-header"></i>
+          </a>
+          <div
+            class="d-flex flex-column justify-content-center align-items-start header-menu-items rounded mt-2 mt-sm-0"
+            id="menu-items"
+          >
+            <a href="#">
+              <i class="fa fa-gem"></i>
+              اینترنت</a
+            >
+            <a href="#">
+              <i class="fa fa-briefcase"></i>
+              پایگاه داده
+            </a>
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              چت جی‌پی‌تی</a
+            >
+
+            <a href="#">
+              <i class="fa fa-coins"></i>
+              استایل‌دهی</a
+            >
+          </div>
+        </div>
+        <a href="#" class="mr-2">
+          <i class="fa fa-code"></i>
+          برنامه نویسی
+        </a>
+        <a href="#">
+          <i class="fas fa-microchip"></i>
+          هوش مصنوعی
+        </a>
+        <a href="#">
+          <i class="fa fa-code-branch"></i>
+          فتوشاپ
+        </a>
+        <a href="#">
+          <i class="fa fa-swatchbook"></i>
+          طراحی
+        </a>
+
+        <div
+          class="d-flex justify-content-between align-items-center w-100 mt-4 px-2 d-sm-none"
+        >
+          <small class="theme-text">تغییر تم:</small>
+          <label class="switch mx-4 d-flex d-sm-none">
+            <input type="checkbox" />
+            <span class="slider" onclick="toggleTheme()"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <body class="w-100">
+      <!-- Intro -->
+      <div
+        class="w-100 d-flex flex-column justify-content-center align-items-center intro-aboutUs mt-5 rounded p-5"
+      >
+        <img src="./assets/img/logo.jpg" class="shadow-sm" alt="بی باگ" />
+
+        <h1 class="mt-4 pt-2">
+          درباره‌ی ما <span class="mx-1 mx-lg-2">بی باگ!</span>
+        </h1>
+
+        <p class="mt-2">
+          دسترسی آسان، همیشگی و همگانی به مقالات آکادمیک و تخصصی
+        </p>
+      </div>
+      <!-- END Intro -->
+      <!-- Description -->
+      <section
+        class="d-flex justify-content-between align-items-center w-100 mt-4 flex-wrap"
+      >
+        <div
+          class="box-description d-flex justify-content-center align-items-center flex-column rounded"
+        >
+          <h4>ساعت مطالعه</h4>
+          <p>
+            دانشجویان ما هر ۶ ماه، بیش از دو میلیون ساعت آموزش را مطالعه
+            می‌کنند.دانشجویان ما هر ۶ ماه، بیش از دو میلیون ساعت آموزش را مطالعه
+            می‌کنند.
+          </p>
+        </div>
+
+        <div
+          class="box-description d-flex justify-content-center align-items-center flex-column rounded mt-3 mt-md-0"
+        >
+          <h4>ساعت مطالعه</h4>
+          <p>
+            دانشجویان ما هر ۶ ماه، بیش از دو میلیون ساعت آموزش را مطالعه
+            می‌کنند.دانشجویان ما هر ۶ ماه، بیش از دو میلیون ساعت آموزش را مطالعه
+            می‌کنند.
+          </p>
+        </div>
+
+        <div
+          class="box-description d-flex justify-content-center align-items-center flex-column rounded mt-3 mt-md-0"
+        >
+          <h4>ساعت مطالعه</h4>
+          <p>
+            دانشجویان ما هر ۶ ماه، بیش از دو میلیون ساعت آموزش را مطالعه
+            می‌کنند.دانشجویان ما هر ۶ ماه، بیش از دو میلیون ساعت آموزش را مطالعه
+            می‌کنند.
+          </p>
+        </div>
+      </section>
+      <!-- END Description -->
+    </body>
+
+    <!-- Margin -->
+    <div class="mt-5 pt-lg-4"></div>
+    <!-- Margin -->
+
+    <footer
+      class="d-flex flex-column flex-lg-row justify-content-between align-items-center w-100 rounded p-5 mt-5"
+    >
+      <div
+        class="d-flex justify-content-lg-start justify-content-center align-items-center w-50 w-sm-100"
+      >
+        <div
+          class="d-flex flex-column align-items-lg-start justify-content-center align-items-center w-50"
+        >
+          <h4 class="fw-bold footer-title mb-3">دسته بندی ها</h4>
+          <a href="#" class="footer-link"> برنامه‌نویسی </a>
+          <a href="#" class="footer-link"> هوش‌مصنوعی </a>
+          <a href="#" class="footer-link"> ارز‌دیجیتال </a>
+          <a href="#" class="footer-link"> ماشین‌لرنینگ </a>
+          <a href="#" class="footer-link"> استایل‌دهی </a>
+        </div>
+        <div
+          class="d-flex flex-column align-items-lg-start justify-content-center align-items-center w-50"
+        >
+          <h4 class="fw-bold footer-title mb-3">ارتباط با ما</h4>
+          <a href="#" class="footer-link"> خدمات ما </a>
+          <a href="#" class="footer-link"> درباره‌ی ما </a>
+          <a href="#" class="footer-link"> همکاری با ما </a>
+          <a href="#" class="footer-link"> تبلیغات </a>
+          <a href="#" class="footer-link"> ایمیل ما </a>
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-column justify-content-center align-items-center w-50 aboutus mt-5 mt-lg-0 w-sm-100"
+      >
+        <h4 class="fw-bold footer-title mb-3">درباره ی بی باگ</h4>
+        <p class="mt-2">
+          بی‌باگ؛ محلی برای یادگیری اصولی، ساده و لذت‌بخش برنامه‌نویسی و
+          تکنولوژی. اینجا تلاش می‌کنیم با آموزش‌های کاربردی، تجربه‌های واقعی و
+          رفع باگ‌های رایج، مسیر رشد شما را هموار کنیم. هدف ما ساخت جامعه‌ای از
+          برنامه‌نویسان خلاق، مستقل و همیشه در حال یادگیری است. همراه ما بمان تا
+          دنیای کدنویسی را بی‌استرس و بی‌باگ تجربه کنیم.
+        </p>
+
+        <div
+          class="d-flex justify-content-center align-items-center mt-3 mt-lg-0"
+        >
+          <div class="social d-flex justify-content-center align-items-center">
+            <img
+              data-light="./assets/img/telegram.png"
+              data-dark="./assets/img/telegram_dark.png"
+              class="w-100 theme-img"
+              src="./assets/img/telegram.png"
+              alt="telegram"
+            />
+          </div>
+          <div class="social d-flex justify-content-center align-items-center">
+            <img
+              data-light="./assets/img/instagram.png"
+              data-dark="./assets/img/instagram_dark.png"
+              class="w-100 theme-img"
+              src="./assets/img/instagram.png"
+              alt="instagram"
+            />
+          </div>
+          <div class="social d-flex justify-content-center align-items-center">
+            <img
+              data-light="./assets/img/gmail.png"
+              data-dark="./assets/img/gmail_dark.png"
+              class="w-100 theme-img"
+              src="./assets/img/gmail.png"
+              alt="gmail"
+            />
+          </div>
+          <div class="social d-flex justify-content-center align-items-center">
+            <img
+              data-light="./assets/img/youtube.png"
+              data-dark="./assets/img/youtube_dark.png"
+              class="w-100 theme-img"
+              src="./assets/img/youtube.png"
+              alt="youtube"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <small class="mb-2 mt-3 text-end">
+      تمام حقوق مادی و معنوی این وب سایت متعلق به <span>بی باگ</span> است.
+    </small>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Custom -->
+    <script src="./assets/js/index.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").carousel({
+          interval: 6000,
+        });
+      });
+    </script>
+  </body>
+</html>
