@@ -163,3 +163,11 @@ function openticket(obj, obj1, obj3) {
   }
 }
 // About Us - END For Question
+
+// Contact Us - For Change Icon Select
+
+function ChangeIcon() {
+  document.getElementById("conselect").classList.toggle("selectconclose");
+}
+
+// Contact Us - END For Change Icon Select

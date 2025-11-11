@@ -1,0 +1,131 @@
+html[data-theme="dark"] {
+  .contactUs input,
+  .contactUs select,
+  .contactUs option,
+  .contactUs textarea {
+    color: var(--black1) !important;
+    background: var(--white) !important;
+  }
+  .contactUs input::placeholder {
+    color: var(--black1) !important;
+  }
+
+  .contactUs label {
+    color: var(--yellow2) !important;
+  }
+}
+
+.contactUs img {
+  width: 45% !important;
+  filter: drop-shadow(5px 5px 0px var(--white)) !important;
+}
+
+.con-form {
+  width: 50% !important;
+}
+
+.contactUs input,
+.contactUs select,
+.contactUs option {
+  color: var(--black2) !important;
+  background: var(--white) !important;
+  opacity: 0.95 !important;
+}
+.selectcon select {
+  appearance: none !important;
+  cursor: pointer !important;
+}
+.selectcon {
+  position: relative !important;
+}
+
+.selectcon::before {
+  content: "" !important;
+  width: 20% !important;
+  height: 100% !important;
+  position: absolute !important;
+  inset: 0px !important;
+  right: auto !important;
+  background: url(../img/arrow_down.png) !important;
+  background-repeat: no-repeat !important;
+  background-position: 25px 45px !important;
+  background-size: 22px !important;
+  z-index: 2 !important;
+  transition: background-image 0.2s ease !important;
+  opacity: 0.9 !important;
+}
+
+.selectcon.selectconclose::before {
+  background-image: url(../img/arrowup.png) !important;
+}
+
+.contactUs input::placeholder {
+  color: var(--black2) !important;
+}
+
+.contactUs textarea {
+  padding: 15px !important;
+  min-height: 150px !important;
+  resize: none !important;
+  opacity: 0.95 !important;
+}
+
+.btn-contactform {
+  color: var(--black1) !important;
+  background: var(--yellow1) !important;
+  font-size: 16px !important;
+  padding: 7px 14px !important;
+}
+
+.btn-contactform:disabled {
+  cursor: not-allowed !important;
+}
+
+.btn-contactform:not(:disabled):hover {
+  transform: scale(0.95) !important;
+  opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+  .contactUs img {
+    width: 100% !important;
+  }
+
+  .con-form {
+    width: 100% !important;
+  }
+
+  .con-form .col-md-6 {
+    padding: 0px !important;
+  }
+
+  .contactUs label {
+    font-size: 14px !important;
+  }
+
+  .contactUs input,
+  .contactUs select,
+  .contactUs option,
+  .contactUs textarea {
+    font-size: 14px !important;
+  }
+  .contactUs input::placeholder {
+    font-size: 12px !important;
+  }
+
+  .selectcon::before {
+    content: "" !important;
+    width: 20% !important;
+    height: 100% !important;
+    position: absolute !important;
+    inset: 0px !important;
+    right: auto !important;
+    background: url(../img/arrow_down.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 10px 41px !important;
+    background-size: 20px !important;
+    z-index: 2 !important;
+    transition: background-image 0.2s ease !important;
+    opacity: 0.9 !important;
+  }
+}
