@@ -95,7 +95,8 @@ html[data-theme="dark"] {
     width: 100% !important;
   }
 
-  .con-form .col-md-6 {
+  .con-form .col-md-6,
+  .con-form .col-md-12 {
     padding: 0px !important;
   }
 
