@@ -28,7 +28,6 @@ html[data-theme="dark"] {
 .contactUs select,
 .contactUs option {
   color: var(--black2) !important;
-  background: var(--white) !important;
   opacity: 0.95 !important;
 }
 .selectcon select {

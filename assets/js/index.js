@@ -167,7 +167,9 @@ function openticket(obj, obj1, obj3) {
 // Contact Us - For Change Icon Select
 
 function ChangeIcon() {
-  document.getElementById("conselect").classList.toggle("selectconclose");
+  if (window.innerWidth > 550) {
+    document.getElementById("conselect").classList.toggle("selectconclose");
+  }
 }
 
 // Contact Us - END For Change Icon Select
