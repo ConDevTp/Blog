@@ -167,7 +167,7 @@
       </div>
     </header>
 
-    <body class="w-100">
+    <body class="w-100 d-flex flex-column">
       <section
         class="w-100 contactUs d-flex justify-content-between align-items-start flex-column flex-lg-row-reverse"
       >
@@ -177,7 +177,7 @@
           class="img-fluid mt-4 pt-2"
         />
 
-        <div
+        <form
           class="d-flex flex-column justify-content-start align-items-center con-form mt-lg-5 pt-lg-5 pl-lg-5 px-1 px-lg-0 mt-4"
         >
           <div class="row w-100 mt-lg-3">
@@ -186,6 +186,7 @@
               <input
                 type="text"
                 class="form-control shadow-sm"
+                required
                 placeholder="به فارسی"
               />
             </div>
@@ -193,6 +194,7 @@
               <label class="form-label float-right">ایمیل</label>
               <input
                 type="email"
+                required
                 class="form-control shadow-sm"
                 placeholder="مانند: example@gmail.com"
               />
@@ -205,6 +207,7 @@
               <input
                 type="number"
                 class="form-control shadow-sm"
+                required
                 placeholder="مانند: 09121111111"
               />
             </div>
@@ -219,18 +222,114 @@
             <textarea
               class="form-control shadow-sm"
               id="exampleFormControlTextarea1"
+              required
               rows="3"
               placeholder="توضیحات خود را وارد کنید ..."
             ></textarea>
           </div>
 
           <div
-            class="w-100 d-flex justify-content-start align-items-center mt-2 px-lg-3"
+            class="w-100 d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 mt-lg-2 px-lg-3"
           >
-            <button class="btn btn-contactform rounded" disabled>
+         
+            <button class="btn btn-contactform rounded" type="submit">
               ثبت درخواست
             </button>
+               <div
+              class="d-flex justify-content-end align-items-center mt-5 mt-lg-0 "
+            >
+              <a href="#"
+                class="m-social d-flex justify-content-center align-items-center"
+              >
+                <img
+                  data-light="./assets/img/telegram_dark.png"
+                  data-dark="./assets/img/telegram.png"
+                  class="w-100 theme-img"
+                  src="./assets/img/telegram_dark.png"
+                  alt="telegram"
+                />
+              </a>
+              <a href="#"
+                class="m-social d-flex justify-content-center align-items-center"
+              >
+                <img
+                  data-light="./assets/img/instagram_dark.png"
+                  data-dark="./assets/img/instagram.png"
+                  class="w-100 theme-img"
+                  src="./assets/img/instagram_dark.png"
+                  alt="instagram"
+                />
+              </a>
+              <a href="#"
+                class="m-social d-flex justify-content-center align-items-center"
+              >
+                <img
+                  data-light="./assets/img/gmail_dark.png"
+                  data-dark="./assets/img/gmail.png"
+                  class="w-100 theme-img"
+                  src="./assets/img/gmail_dark.png"
+                  alt="gmail"
+                />
+              </a>
+              <a href="#"
+                class="m-social d-flex justify-content-center align-items-center"
+              >
+                <img
+                  data-light="./assets/img/youtube_dark.png"
+                  data-dark="./assets/img/youtube.png"
+                  class="w-100 theme-img"
+                  src="./assets/img/youtube_dark.png"
+                  alt="youtube"
+                />
+              </a>
+            </div>
           </div>
+        </form>
+      </section>
+
+      <section
+        class="d-flex flex-column flex-lg-row justify-content-between align-items-center w-100 mt-5 pt-lg-5"
+      >
+        <div
+          class="box-contactus d-flex flex-column justify-content-center align-items-center"
+        >
+          <h3>آدرس</h3>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+            کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+            طراحی اساسا مورد استفاده قرار گیرد.
+          </p>
+        </div>
+        <div
+          class="box-contactus d-flex flex-column justify-content-center align-items-center"
+        >
+          <h3>ایمیل</h3>
+          <p>
+            <i class="fa fa-at mx-2"></i>
+            <span>bibagTest@gmail.com</span>
+            <br />
+
+            <i class="fa fa-at mx-2"></i>
+            <span>bibagTest@gmail.com</span>
+            <br />
+          </p>
+        </div>
+        <div
+          class="box-contactus d-flex flex-column justify-content-center align-items-center"
+        >
+          <h3>تلفن</h3>
+          <p>
+            <small class="fw-bold mx-2">+98</small> 0912400500 <br />
+            <small class="fw-bold mx-2">+98</small> 0912400500 <br />
+          </p>
         </div>
       </section>
     </body>

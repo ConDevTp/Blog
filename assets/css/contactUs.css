@@ -3,21 +3,22 @@ html[data-theme="dark"] {
   .contactUs select,
   .contactUs option,
   .contactUs textarea {
-    color: var(--black1) !important;
+    color: var(--black3) !important;
     background: var(--white) !important;
   }
-  .contactUs input::placeholder {
-    color: var(--black1) !important;
+  .contactUs input::placeholder,
+  .contactUs textarea::placeholder {
+    color: var(--black3) !important;
   }
 
   .contactUs label {
-    color: var(--yellow2) !important;
+    color: var(--black3) !important;
   }
 }
 
 .contactUs img {
   width: 45% !important;
-  filter: drop-shadow(5px 5px 0px var(--white)) !important;
+  filter: drop-shadow(-5px -5px 0px var(--yellow2)) !important;
 }
 
 .con-form {
@@ -29,6 +30,7 @@ html[data-theme="dark"] {
 .contactUs option {
   color: var(--black2) !important;
   opacity: 0.95 !important;
+  padding: 20px 15px !important;
 }
 .selectcon select {
   appearance: none !important;
@@ -86,7 +88,41 @@ html[data-theme="dark"] {
   opacity: 0.9;
 }
 
+.m-social {
+  width: 35px !important;
+  height: 35px !important;
+  border: 0.5px solid var(--yellow1) !important;
+  border-radius: 200px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0px 5px !important;
+  cursor: pointer;
+  padding: 9px !important;
+}
+
+.m-social:hover {
+  transform: rotate(360deg) scale(0.9) !important;
+}
+
+.m-social img {
+  filter: none !important;
+  width: 100% !important;
+}
+
+.m-social:nth-child(3) {
+  padding: 8px !important;
+}
+
+.m-social:nth-child(4) {
+  padding: 8px !important;
+  padding-top: 12px !important;
+}
+
 @media (max-width: 992px) {
+  .m-social {
+    margin: 0 10px !important;
+  }
   .contactUs img {
     width: 100% !important;
   }
@@ -128,5 +164,86 @@ html[data-theme="dark"] {
     z-index: 2 !important;
     transition: background-image 0.2s ease !important;
     opacity: 0.9 !important;
+  }
+}
+
+/* Box */
+
+.box-contactus {
+  background: var(--yellow1) !important;
+  width: 31% !important;
+  padding: 25px !important;
+  border-radius: 6px !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.box-contactus h3 {
+  color: var(--black1) !important;
+  font-size: 20px !important;
+  font-family: "rokhm" !important;
+  text-align: center !important;
+  direction: ltr !important;
+}
+
+.box-contactus P {
+  color: var(--black1) !important;
+  font-size: 18px !important;
+  text-align: center !important;
+  margin-top: 20px !important;
+  direction: ltr !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  margin-bottom: 0px !important;
+}
+.box-contactus:nth-child(1) p {
+  direction: rtl !important;
+}
+
+.box-contactus small {
+  color: var(--black1) !important;
+  font-family: "rokhm" !important;
+}
+
+.box-contactus i {
+  color: var(--black1) !important;
+  opacity: 0.9 !important;
+  font-size: 15px !important;
+}
+
+.box-contactus span {
+  color: var(--black1) !important;
+  cursor: pointer;
+}
+
+.box-contactus span:hover {
+  color: var(--white) !important;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .box-contactus {
+    width: 100% !important;
+    margin-top: 30px !important;
+    padding: 25px !important;
+  }
+
+  .box-contactus h3 {
+    font-size: 18px !important;
+  }
+
+  .box-contactus P {
+    font-size: 16px !important;
+    margin-top: 15px !important;
+  }
+
+  .box-contactus:nth-child(1) {
+    margin-top: 0px !important;
+  }
+
+  .box-contactus small,
+  .box-contactus i {
+    font-size: 13px !important;
   }
 }
