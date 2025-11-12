@@ -28,7 +28,7 @@
   box-sizing: border-box !important;
   color: var(--white) !important;
   direction: rtl !important;
-  transition: 0.2s !important;
+  transition: all 0.2s !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;

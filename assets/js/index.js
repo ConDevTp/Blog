@@ -1,12 +1,139 @@
 // Header
 
+function toggleTheme() {
+  const html = document.documentElement;
+  const switchInput = document.querySelector('.switch input[type="checkbox"]');
+  const images = document.querySelectorAll("img.theme-img");
+
+  if (switchInput) {
+    requestAnimationFrame(() => {
+      const isChecked = switchInput.checked;
+      const newTheme = isChecked ? "dark" : "light";
+
+      html.dataset.theme = newTheme;
+      localStorage.setItem("theme", newTheme);
+
+      switchInput.checked = isChecked;
+
+      images.forEach((img) => {
+        const lightSrc = img.dataset.light;
+        const darkSrc = img.dataset.dark;
+        img.src = newTheme === "dark" ? darkSrc : lightSrc;
+      });
+    });
+    return;
+  }
+
+  const currentTheme = html.dataset.theme;
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  html.dataset.theme = newTheme;
+  localStorage.setItem("theme", newTheme);
+  images.forEach((img) => {
+    const lightSrc = img.dataset.light;
+    const darkSrc = img.dataset.dark;
+    img.src = newTheme === "dark" ? darkSrc : lightSrc;
+  });
+}
+function applySavedTheme() {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  const html = document.documentElement;
+  const switchInput = document.querySelector('.switch input[type="checkbox"]');
+  const images = document.querySelectorAll("img.theme-img");
+
+  html.dataset.theme = savedTheme;
+
+  if (switchInput) {
+    switchInput.checked = savedTheme === "dark";
+  }
+
+  images.forEach((img) => {
+    const lightSrc = img.dataset.light;
+    const darkSrc = img.dataset.dark;
+    img.src = savedTheme === "dark" ? darkSrc : lightSrc;
+  });
+}
+
+function moveSwitch() {
+  let switchEl = document.getElementById("themeSwitch");
+
+  if (!switchEl) {
+    switchEl = document.createElement("label");
+    switchEl.id = "themeSwitch";
+
+    const input = document.createElement("input");
+    input.type = "checkbox";
+
+    const span = document.createElement("span");
+    span.className = "slider";
+    span.onclick = toggleTheme;
+
+    switchEl.append(input, span);
+  }
+
+  let mobileContainer = document.getElementById("ConToggleMobile");
+  let pcContainer = document.getElementById("ConTogglePC");
+
+  if (!mobileContainer) {
+    mobileContainer = document.createElement("div");
+    mobileContainer.id = "ConToggleMobile";
+    document.body.appendChild(mobileContainer);
+  }
+  if (!pcContainer) {
+    pcContainer = document.createElement("div");
+    pcContainer.id = "ConTogglePC";
+    document.body.appendChild(pcContainer);
+  }
+
+  if (window.innerWidth <= 550) {
+    switchEl.className = "switch mx-4 d-flex";
+    if (switchEl.parentElement !== mobileContainer) {
+      pcContainer?.contains(switchEl) && pcContainer.removeChild(switchEl);
+      mobileContainer?.appendChild(switchEl);
+    }
+  } else {
+    switchEl.className = "switch mx-4 d-flex";
+    if (switchEl.parentElement !== pcContainer) {
+      mobileContainer?.contains(switchEl) &&
+        mobileContainer.removeChild(switchEl);
+      pcContainer?.appendChild(switchEl);
+    }
+  }
+
+  applySavedTheme();
+}
+
+function initThemeSwitch() {
+  const tryMoveSwitch = () => {
+    if (
+      document.getElementById("ConToggleMobile") ||
+      document.getElementById("ConTogglePC")
+    ) {
+      moveSwitch();
+      return;
+    }
+    setTimeout(tryMoveSwitch, 300);
+  };
+
+  tryMoveSwitch();
+}
+
+document.addEventListener("DOMContentLoaded", initThemeSwitch);
+
+window.addEventListener("resize", moveSwitch);
+
+window.addEventListener("pageshow", moveSwitch);
+
 if (window.innerWidth < 550) {
-  document.getElementById("menu-items").classList.add("show-items");
+  if (this.document.getElementById("menu-items")) {
+    document.getElementById("menu-items").classList.add("show-items");
+  }
 }
 
 window.addEventListener("resize", function () {
   if (window.innerWidth < 550) {
-    document.getElementById("menu-items").classList.add("show-items");
+    if (this.document.getElementById("menu-items")) {
+      document.getElementById("menu-items").classList.add("show-items");
+    }
   }
 
   closeMenu();
@@ -61,22 +188,6 @@ function closeMenu() {
   document.getElementById("menu_mobile").classList.remove("Toogle_Menu_Mobile");
   document.body.classList.remove("no-scroll");
   document.getElementById("overlay").style.display = "none";
-}
-
-function toggleTheme() {
-  const html = document.documentElement;
-  const currentTheme = html.dataset.theme;
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  html.dataset.theme = newTheme;
-
-  // تغییر عکس‌ها
-  const images = document.querySelectorAll("img.theme-img");
-  images.forEach((img) => {
-    const lightSrc = img.dataset.light;
-    const darkSrc = img.dataset.dark;
-    img.src = newTheme === "dark" ? darkSrc : lightSrc;
-  });
 }
 
 // Header END
