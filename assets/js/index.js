@@ -1,3 +1,6 @@
+// All
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+
 // Header
 
 function toggleTheme() {
@@ -274,4 +277,3 @@ function openticket(obj, obj1, obj3) {
   }
 }
 // About Us - END For Question
-
