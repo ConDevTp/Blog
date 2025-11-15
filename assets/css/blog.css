@@ -1,0 +1,91 @@
+.SingleBlog img {
+  width: 100% !important;
+  max-height: 400px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+.SingleBlog {
+  text-align: right !important;
+}
+
+.SingleBlogTitle {
+  font-family: "rokhb" !important;
+  color: var(--yellow1) !important;
+  padding-bottom: 15px !important;
+  font-size: 40px !important;
+  border-bottom: 1px solid var(--yellow1) !important;
+}
+
+.SingleBlogTitle2 {
+  font-family: "rokhm" !important;
+  color: var(--yellow1) !important;
+  padding-bottom: 15px !important;
+  font-size: 35px !important;
+  border-bottom: 1px solid var(--yellow1) !important;
+}
+.SingleBlogTitle3 {
+  font-family: "rokhm" !important;
+  color: var(--yellow1) !important;
+  font-size: 30px !important;
+}
+
+.SingleBlog p {
+  font-size: 20px !important;
+  text-align: justify !important;
+  color: var(--yellow1) !important;
+  line-height: 40px !important;
+  word-spacing: 3px !important;
+}
+
+.m-toast p {
+  margin: 0px !important;
+  padding: 0px !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 1 !important;
+  line-clamp: 1 !important;
+  overflow: hidden !important;
+}
+
+.m-toast {
+  background-color: var(--black2) !important;
+  border-right: 5px solid var(--yellow1) !important;
+  width: 100%;
+  padding: 20px !important;
+  padding-right: 30px !important;
+  border-radius: 10px !important;
+}
+
+.SingleBlog .text-2 {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  line-clamp: 3 !important;
+  overflow: hidden !important;
+}
+
+.btnend {
+  padding: 5px 15px !important;
+  border: 1px solid var(--yellow1) !important;
+  cursor: pointer;
+  padding-top: 12px !important;
+}
+
+.btnend small {
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: 16px !important;
+  color: var(--yellow1) !important;
+}
+
+.btnend small:nth-child(2) {
+  margin-right: 5px !important;
+}
+
+.btnend:hover {
+  background: var(--yellow1) !important;
+}
+
+.btnend:hover small {
+  color: var(--black1) !important;
+}
