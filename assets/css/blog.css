@@ -1,6 +1,6 @@
 .SingleBlog img {
   width: 100% !important;
-  max-height: 400px !important;
+  max-height: 500px !important;
   object-fit: cover !important;
   object-position: center !important;
 }
@@ -13,7 +13,7 @@
   color: var(--yellow1) !important;
   padding-bottom: 15px !important;
   font-size: 40px !important;
-  border-bottom: 1px solid var(--yellow1) !important;
+  border-bottom: 1px solid var(--yellow2) !important;
 }
 
 .SingleBlogTitle2 {
@@ -21,7 +21,7 @@
   color: var(--yellow1) !important;
   padding-bottom: 15px !important;
   font-size: 35px !important;
-  border-bottom: 1px solid var(--yellow1) !important;
+  border-bottom: 1px solid var(--yellow2) !important;
 }
 .SingleBlogTitle3 {
   font-family: "rokhm" !important;
@@ -49,7 +49,7 @@
 
 .m-toast {
   background-color: var(--black2) !important;
-  border-right: 5px solid var(--yellow1) !important;
+  border-right: 5px solid var(--yellow2) !important;
   width: 100%;
   padding: 20px !important;
   padding-right: 30px !important;
@@ -66,7 +66,7 @@
 
 .btnend {
   padding: 5px 15px !important;
-  border: 1px solid var(--yellow1) !important;
+  border: 1px solid var(--yellow2) !important;
   cursor: pointer;
   padding-top: 12px !important;
 }
@@ -88,4 +88,133 @@
 
 .btnend:hover small {
   color: var(--black1) !important;
+}
+
+.about_Blog small {
+  font-size: 16px !important;
+  color: var(--yellow1) !important;
+}
+
+.blog-tag {
+  padding: 5px 10px !important;
+  border-radius: 200px !important;
+  border: 1px solid var(--yellow1) !important;
+  color: var(--yellow1) !important;
+  cursor: pointer;
+  margin-right: 15px !important;
+  font-size: 12px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.blog-tag:hover {
+  background: var(--yellow1) !important;
+  color: var(--black1) !important;
+  transform: scale(0.95) !important;
+  font-weight: bolder !important;
+}
+
+.tag-title {
+  font-size: 18px !important;
+  font-family: "rokhm" !important;
+  min-width: fit-content !important;
+  color: var(--yellow1) !important;
+}
+
+.con-boxes .box-text {
+  color: var(--white) !important;
+}
+
+.box img {
+  max-height: fit-content !important;
+  min-height: fit-content !important;
+  height: fit-content !important;
+}
+
+@media (max-width: 768px) {
+  .w-md-100 {
+    width: 100% !important;
+  }
+  .SingleBlog img {
+    height: 300px !important;
+  }
+
+  .SingleBlogTitle {
+    padding-bottom: 15px !important;
+    font-size: 20px !important;
+  }
+
+  .about_Blog small {
+    font-size: 12px !important;
+  }
+
+  .about_Blog small:nth-child(1) {
+    font-size: 10px !important;
+  }
+
+  .SingleBlogTitle2 {
+    padding-bottom: 10px !important;
+    font-size: 18px !important;
+  }
+  .SingleBlogTitle3 {
+    font-size: 16px !important;
+  }
+
+  .SingleBlog p {
+    font-size: 14px !important;
+    text-align: justify !important;
+    color: var(--yellow1) !important;
+    line-height: 28px !important;
+    word-spacing: 2px !important;
+  }
+
+  .m-toast {
+    background-color: var(--black2) !important;
+    width: 100%;
+    padding: 10px !important;
+    padding-right: 30px !important;
+    border-radius: 7px !important;
+    padding-right: 15px !important;
+  }
+
+  .btnend {
+    cursor: pointer;
+    padding-top: 7px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0px !important;
+  }
+
+  .btnend small {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-size: 12px !important;
+    color: var(--yellow1) !important;
+  }
+
+  .btntext {
+    padding: 0 10px !important;
+  }
+
+  .btntext small:nth-child(2) {
+    padding-top: 3px !important;
+  }
+
+  .blog-tag {
+    padding: 5px 10px !important;
+    border-radius: 200px !important;
+    border: 1px solid var(--yellow1) !important;
+    color: var(--yellow1) !important;
+    cursor: pointer;
+    margin: 7px 5px !important;
+    font-size: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 6px !important;
+  }
 }
