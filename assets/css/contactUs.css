@@ -177,6 +177,10 @@ html[data-theme="dark"] {
   backdrop-filter: blur(10px) !important;
 }
 
+.box-contactus:nth-child(2) {
+  background: var(--yellow2) !important;
+}
+
 .box-contactus h3 {
   color: var(--black1) !important;
   font-size: 20px !important;

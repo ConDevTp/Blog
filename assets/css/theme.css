@@ -74,6 +74,10 @@
     box-shadow: none !important;
   }
 
+  .login-btn {
+    color: var(--black3) !important;
+  }
+
   /* category */
 
   .courses-category,
