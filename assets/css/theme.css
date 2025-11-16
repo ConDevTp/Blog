@@ -1,3 +1,4 @@
+/* Light Theme Colors */
 :root {
   --white: #fbfcd4;
   --yellow1: #efbc33;
@@ -7,6 +8,7 @@
   --black3: #000;
 }
 
+/* Dark Theme Colors */
 [data-theme="dark"] {
   --white: #fff;
   --yellow1: #181305;
@@ -14,7 +16,10 @@
   --black1: #efbc33;
   --black2: #efbc33;
   --black3: #000;
+}
 
+/* Some Change in Dark Mode - For All Pages */
+[data-theme="dark"] {
   header input {
     background-color: var(--black1) !important;
     border: none !important;
@@ -78,22 +83,12 @@
     color: var(--black3) !important;
   }
 
-  /* category */
-
-  .courses-category,
-  .list-group,
-  .hashtag-item {
-    border: 1px solid #00000071 !important;
-    box-shadow: none !important;
-    color: #000 !important;
-  }
-
-  .list-group > *,
-  .courses-category h3 {
-    color: #000 !important;
+  .box.selected::before {
+    border: 1px solid var(--black1) !important;
   }
 }
 
+/* For Add Bg Image in light mode */
 html[data-theme="light"]::before {
   z-index: -1 !important;
   content: "" !important;
@@ -106,7 +101,6 @@ html[data-theme="light"]::before {
   width: 100% !important;
   height: 100% !important;
 }
-
 html[data-theme="light"]::after {
   z-index: -1 !important;
   content: "" !important;

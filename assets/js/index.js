@@ -254,26 +254,52 @@ setInterval(changeblog, 4000);
 // About Us - END For Blogs
 // About Us - For Question
 function openticket(obj, obj1, obj3) {
-  if (document.getElementById(obj).classList.contains("boxitemshow")) {
-    document.getElementById(obj).classList.remove("boxitemshow");
-    document.getElementById(obj).classList.add("boxitemshowclose");
-    document.getElementById(obj1).src = "./assets/img/up.svg";
-  } else {
-    document.getElementById(obj).classList.add("boxitemshow");
-    document.getElementById(obj).classList.remove("boxitemshowclose");
-    document.getElementById(obj1).src = "./assets/img/down.svg";
-  }
+  const currentTheme = document.documentElement.dataset.theme || "light";
 
-  if (
-    obj3.getElementsByClassName("boxitem")[0].classList.contains("borderbotm")
-  ) {
-    obj3.getElementsByClassName("boxitem")[0].classList.remove("borderbotm");
-    obj3.getElementsByClassName("boxitem")[0].classList.add("borderselected");
+  if (currentTheme === "dark") {
+    if (document.getElementById(obj).classList.contains("boxitemshow")) {
+      document.getElementById(obj).classList.remove("boxitemshow");
+      document.getElementById(obj).classList.add("boxitemshowclose");
+      document.getElementById(obj1).src = "./assets/img/up-dark.svg";
+    } else {
+      document.getElementById(obj).classList.add("boxitemshow");
+      document.getElementById(obj).classList.remove("boxitemshowclose");
+      document.getElementById(obj1).src = "./assets/img/down-dark.svg";
+    }
+
+    if (
+      obj3.getElementsByClassName("boxitem")[0].classList.contains("borderbotm")
+    ) {
+      obj3.getElementsByClassName("boxitem")[0].classList.remove("borderbotm");
+      obj3.getElementsByClassName("boxitem")[0].classList.add("borderselected");
+    } else {
+      obj3.getElementsByClassName("boxitem")[0].classList.add("borderbotm");
+      obj3
+        .getElementsByClassName("boxitem")[0]
+        .classList.remove("borderselected");
+    }
   } else {
-    obj3.getElementsByClassName("boxitem")[0].classList.add("borderbotm");
-    obj3
-      .getElementsByClassName("boxitem")[0]
-      .classList.remove("borderselected");
+    if (document.getElementById(obj).classList.contains("boxitemshow")) {
+      document.getElementById(obj).classList.remove("boxitemshow");
+      document.getElementById(obj).classList.add("boxitemshowclose");
+      document.getElementById(obj1).src = "./assets/img/up.svg";
+    } else {
+      document.getElementById(obj).classList.add("boxitemshow");
+      document.getElementById(obj).classList.remove("boxitemshowclose");
+      document.getElementById(obj1).src = "./assets/img/down.svg";
+    }
+
+    if (
+      obj3.getElementsByClassName("boxitem")[0].classList.contains("borderbotm")
+    ) {
+      obj3.getElementsByClassName("boxitem")[0].classList.remove("borderbotm");
+      obj3.getElementsByClassName("boxitem")[0].classList.add("borderselected");
+    } else {
+      obj3.getElementsByClassName("boxitem")[0].classList.add("borderbotm");
+      obj3
+        .getElementsByClassName("boxitem")[0]
+        .classList.remove("borderselected");
+    }
   }
 }
 // About Us - END For Question

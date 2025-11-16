@@ -1,5 +1,25 @@
 @import url("./theme.css");
 
+/* Some Change in Dark Mode */
+[data-theme="dark"] {
+  .courses-category,
+  .list-group,
+  .hashtag-item {
+    border: 1px solid #00000071 !important;
+    box-shadow: none !important;
+    color: #000 !important;
+  }
+
+  .title-groups {
+    color: var(--black3) !important;
+  }
+
+  .list-group > *,
+  .courses-category h3 {
+    color: #000 !important;
+  }
+}
+
 body {
   overflow: hidden !important;
 }
@@ -10,7 +30,6 @@ body {
   left: 50px !important;
   z-index: -1;
   width: 100% !important;
-  /* filter: blur(5px); */
   opacity: 0.2;
   object-fit: cover !important;
   object-position: center !important;
@@ -32,24 +51,6 @@ body {
 }
 
 /* Intro Start */
-
-.btn-intro {
-  animation: pulse 1.2s ease-in-out infinite !important;
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(0.95);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
 @media (max-width: 550px) {
   .con-intro h1 {

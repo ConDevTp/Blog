@@ -1,10 +1,12 @@
 /* Body */
 
+/* Remove Bg Image in Dark Mode */
 html::after,
 html::before {
   display: none !important;
 }
 
+/* Some Change For Dark Mode */
 html[data-theme="dark"] {
   body::before {
     content: "";
@@ -50,6 +52,7 @@ html[data-theme="dark"] {
   }
 }
 
+/* All Styles */
 body::before {
   content: "";
   position: absolute !important;
@@ -81,8 +84,6 @@ body::before {
 }
 
 /* Section 1 */
-
-
 
 .categories_input_search {
   width: 140% !important;
