@@ -417,3 +417,24 @@ html[data-theme="dark"] {
   }
 }
 /* END Question */
+
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.img-icon{
+  margin-left: 10px !important;
+  font-size: 18px !important;
+  color: var(--yellow1) !important;
+}
+
+@media (max-width: 992px) {
+  .img-icon{
+  margin-left: 10px !important;
+  margin-top: -5px !important;
+  font-size: 12px !important;
+  color: var(--yellow1) !important;
+}
+}

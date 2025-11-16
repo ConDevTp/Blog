@@ -175,6 +175,7 @@ html[data-theme="dark"] {
   padding: 25px !important;
   border-radius: 6px !important;
   backdrop-filter: blur(10px) !important;
+  opacity: 0.9 !important;
 }
 
 .box-contactus:nth-child(2) {

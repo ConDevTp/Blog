@@ -254,52 +254,17 @@ setInterval(changeblog, 4000);
 // About Us - END For Blogs
 // About Us - For Question
 function openticket(obj, obj1, obj3) {
-  const currentTheme = document.documentElement.dataset.theme || "light";
+  const el = document.getElementById(obj);
+  const icon = obj3.querySelector('i');
 
-  if (currentTheme === "dark") {
-    if (document.getElementById(obj).classList.contains("boxitemshow")) {
-      document.getElementById(obj).classList.remove("boxitemshow");
-      document.getElementById(obj).classList.add("boxitemshowclose");
-      document.getElementById(obj1).src = "./assets/img/up-dark.svg";
-    } else {
-      document.getElementById(obj).classList.add("boxitemshow");
-      document.getElementById(obj).classList.remove("boxitemshowclose");
-      document.getElementById(obj1).src = "./assets/img/down-dark.svg";
-    }
+  el.classList.toggle('boxitemshow');
+  el.classList.toggle('boxitemshowclose');
 
-    if (
-      obj3.getElementsByClassName("boxitem")[0].classList.contains("borderbotm")
-    ) {
-      obj3.getElementsByClassName("boxitem")[0].classList.remove("borderbotm");
-      obj3.getElementsByClassName("boxitem")[0].classList.add("borderselected");
-    } else {
-      obj3.getElementsByClassName("boxitem")[0].classList.add("borderbotm");
-      obj3
-        .getElementsByClassName("boxitem")[0]
-        .classList.remove("borderselected");
-    }
-  } else {
-    if (document.getElementById(obj).classList.contains("boxitemshow")) {
-      document.getElementById(obj).classList.remove("boxitemshow");
-      document.getElementById(obj).classList.add("boxitemshowclose");
-      document.getElementById(obj1).src = "./assets/img/up.svg";
-    } else {
-      document.getElementById(obj).classList.add("boxitemshow");
-      document.getElementById(obj).classList.remove("boxitemshowclose");
-      document.getElementById(obj1).src = "./assets/img/down.svg";
-    }
+  obj3.querySelector('.boxitem').classList.toggle('borderselected');
+  obj3.querySelector('.boxitem').classList.toggle('borderbotm');
 
-    if (
-      obj3.getElementsByClassName("boxitem")[0].classList.contains("borderbotm")
-    ) {
-      obj3.getElementsByClassName("boxitem")[0].classList.remove("borderbotm");
-      obj3.getElementsByClassName("boxitem")[0].classList.add("borderselected");
-    } else {
-      obj3.getElementsByClassName("boxitem")[0].classList.add("borderbotm");
-      obj3
-        .getElementsByClassName("boxitem")[0]
-        .classList.remove("borderselected");
-    }
-  }
+  // چرخش آیکون
+  icon.classList.toggle('rotate');
 }
+
 // About Us - END For Question
